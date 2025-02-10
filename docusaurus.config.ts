@@ -81,7 +81,7 @@ const config: Config = {
           label: 'Tutorial',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
-        {href: 'https://dongsirhub.github.io/comprehensive-rust/', label: 'rust', position: 'right'},
+        {href: 'https://dongsirhub.github.io/comprehensive-rust/zh-CN/index.html', label: 'rust', position: 'right'},
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
