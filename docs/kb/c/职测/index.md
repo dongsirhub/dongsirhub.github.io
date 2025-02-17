@@ -36,3 +36,6 @@
 
 1. 多个元素分开看，边做边排除
 2. 位置规律——就近走原则
+
+![alt text](image-5.png)
+![alt text](image-6.png)
