@@ -80,6 +80,12 @@ const config: Config = {
           position: 'left',
           label: 'kb',
         },
+        {
+          type: 'docSidebar',
+          sidebarId: 'java',
+          position: 'left',
+          label: 'java',
+        },
         {to: '/blog', label: 'Blog', position: 'left'},
         {href: 'https://dongsirhub.github.io/comprehensive-rust/zh-CN/index.html', label: 'rust', position: 'right'},
         {
