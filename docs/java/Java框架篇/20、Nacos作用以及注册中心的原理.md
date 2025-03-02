@@ -17,6 +17,5 @@ Nacos 注册中心分为server 与client，server 采用Java 编写，为client 
 
 ![1714550793849-3a06c02f-0965-472c-8497-ab71ca54a26a.png](./img/BkDTgAksgNKbO4Lw/1714550793849-3a06c02f-0965-472c-8497-ab71ca54a26a-435482.png)
 
-
 更新: 2024-05-01 16:06:35  
-[原文](<https://www.yuque.com/zhichangzhishiku/edrbqg/vygi74py7aln8g2e>)
+[原文](https://www.yuque.com/zhichangzhishiku/edrbqg/vygi74py7aln8g2e)
