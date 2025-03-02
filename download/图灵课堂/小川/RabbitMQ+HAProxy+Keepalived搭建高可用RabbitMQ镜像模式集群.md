@@ -200,7 +200,7 @@ public class Consumer {
 ```
 
 # 3.<font style="color:rgb(77, 77, 77);">RabbitMQ</font>集群搭建
-![画板](./img/wcZhbDwULsqD9VRB/1681824192942-84bc07aa-a5db-4415-a453-07e397c2d558-029125.jpeg)
+![画板](./img/wcZhbDwULsqD9VRB/1681824192942-84bc07aa-a5db-4415-a453-07e397c2d558-113997.jpeg)
 
 1. 首先通过克隆的方式，从第一台安装好<font style="color:rgb(77, 77, 77);">RabbitMQ</font>的服务器环境克隆出两台机器
 2. 修改克隆出的2台RabbitMq服务器的Ip地址，修改IP(可不修改，通过ifconfig或者ip addr查看ip地址)  
@@ -279,7 +279,7 @@ public class Consumer {
 
 访问：[http://192.168.16.137:15672/](http://192.168.16.137:15672/)，如下图即表示搭建成功
 
-![1681796058310-d4675e26-c73b-4d3d-8181-99069f61a8ba.png](./img/wcZhbDwULsqD9VRB/1681796058310-d4675e26-c73b-4d3d-8181-99069f61a8ba-767672.png)
+![1681796058310-d4675e26-c73b-4d3d-8181-99069f61a8ba.png](./img/wcZhbDwULsqD9VRB/1681796058310-d4675e26-c73b-4d3d-8181-99069f61a8ba-709433.png)
 
 12. 解除集群节点(node2和node3机器分别执行)
 
@@ -300,7 +300,7 @@ public class Consumer {
 + <font style="color:rgb(34, 34, 34);">想要解决这个问题，需要开启队列镜像，将集群中的队列彼此之间进行镜像，此时消息就会被拷贝到处于同一个镜像分组中的所有队列上。</font>
 
 ## 4.2 管理界面配置参数
-![1679409065969-b13e5760-bb38-4139-8a50-acfbca9da7bb.png](./img/wcZhbDwULsqD9VRB/1679409065969-b13e5760-bb38-4139-8a50-acfbca9da7bb-298041.png)
+![1679409065969-b13e5760-bb38-4139-8a50-acfbca9da7bb.png](./img/wcZhbDwULsqD9VRB/1679409065969-b13e5760-bb38-4139-8a50-acfbca9da7bb-895793.png)
 
 **参数解释**：
 
@@ -322,7 +322,7 @@ public class Consumer {
 + <font style="color:rgb(77, 77, 77);">一种高效、可靠、免费的高可用及</font>**<font style="color:rgb(77, 77, 77);">负载均衡</font>**<font style="color:rgb(77, 77, 77);">软件，非常适合于高负载站点的七层数据请求。客户端通过Haproxy代理服务器获得站点页面，而代理服务器收到客户请求后根据负载均衡的规则将请求数据转发给后端真实服务器</font>
 + <font style="color:rgb(77, 77, 77);">实现了一种事件驱动、单一进程模型，能支持非常大的并发连接数</font>
 
-![画板](./img/wcZhbDwULsqD9VRB/1681894506004-19190e8a-1155-45f3-b1ad-829d154626b2-597474.jpeg)
+![画板](./img/wcZhbDwULsqD9VRB/1681894506004-19190e8a-1155-45f3-b1ad-829d154626b2-760067.jpeg)
 
 ## 5.2安装HAProxy
 1. 下载依赖包
@@ -449,10 +449,10 @@ listen monitor
 
 访问：[http://192.168.16.138:8100/rabbitmq_stats](http://192.168.16.138:8100/rabbitmq_stats)，如下图即表示安装成功
 
-![1681796574367-b8031989-717d-4ff6-ba96-5e65632ccc0a.png](./img/wcZhbDwULsqD9VRB/1681796574367-b8031989-717d-4ff6-ba96-5e65632ccc0a-730596.png)
+![1681796574367-b8031989-717d-4ff6-ba96-5e65632ccc0a.png](./img/wcZhbDwULsqD9VRB/1681796574367-b8031989-717d-4ff6-ba96-5e65632ccc0a-814218.png)
 
 # 6. 高可用-keepalived
-![画板](./img/wcZhbDwULsqD9VRB/1681734426736-5d6ff8b0-ea4e-405f-a67a-ae185ecfbd7d-361848.jpeg)
+![画板](./img/wcZhbDwULsqD9VRB/1681734426736-5d6ff8b0-ea4e-405f-a67a-ae185ecfbd7d-000257.jpeg)
 
 安装我们keepalived之前，我们再多安装一台HAProxy
 
@@ -477,7 +477,7 @@ listen monitor
 
 <font style="color:rgb(51, 51, 51);">出现</font>**<font style="color:rgb(51, 51, 51);">keepalived/dbus/Makefile</font>**<font style="color:rgb(51, 51, 51);"> 表示配置成功</font>
 
-![1681722891939-41edb84f-8c80-421d-9b43-7d314d739ad6.png](./img/wcZhbDwULsqD9VRB/1681722891939-41edb84f-8c80-421d-9b43-7d314d739ad6-675484.png)
+![1681722891939-41edb84f-8c80-421d-9b43-7d314d739ad6.png](./img/wcZhbDwULsqD9VRB/1681722891939-41edb84f-8c80-421d-9b43-7d314d739ad6-463443.png)
 
 编译加安装：<font style="color:rgb(97, 97, 97);"> </font><font style="color:rgb(199, 37, 78);background-color:rgb(249, 242, 244);">make && make install </font>
 
@@ -605,13 +605,13 @@ fi
 
 <font style="color:rgb(199, 37, 78);background-color:rgb(249, 242, 244);">service keepalived status</font>
 
-![1681797283923-f305e8bf-2d97-4d26-8460-cf3521508997.png](./img/wcZhbDwULsqD9VRB/1681797283923-f305e8bf-2d97-4d26-8460-cf3521508997-523561.png)
+![1681797283923-f305e8bf-2d97-4d26-8460-cf3521508997.png](./img/wcZhbDwULsqD9VRB/1681797283923-f305e8bf-2d97-4d26-8460-cf3521508997-638960.png)
 
 4. 查看VIP地址<font style="color:rgb(77, 77, 77);">(</font>虚拟IP)是否生效，再master节点上执行，如图即表示成功
 
 <font style="color:rgb(199, 37, 78);background-color:rgb(249, 242, 244);">ip addr</font>
 
-![1681797506757-4fb1bb62-b2ea-4f60-9214-468aa3d878e1.png](./img/wcZhbDwULsqD9VRB/1681797506757-4fb1bb62-b2ea-4f60-9214-468aa3d878e1-446239.png)
+![1681797506757-4fb1bb62-b2ea-4f60-9214-468aa3d878e1.png](./img/wcZhbDwULsqD9VRB/1681797506757-4fb1bb62-b2ea-4f60-9214-468aa3d878e1-524150.png)
 
   
  

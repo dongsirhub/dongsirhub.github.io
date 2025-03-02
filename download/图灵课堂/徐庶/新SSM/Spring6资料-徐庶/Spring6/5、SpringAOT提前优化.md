@@ -9,11 +9,11 @@
 
 <font style="color:rgb(77, 77, 77);">AOT，Ahead Of Time，指运行前编译，是两种程序的编译方式</font>
 
-![1706876075951-483d4d3d-c02f-45e5-aed5-18bc097a42a4.png](./img/6CQMBlz9kKa_dSzO/1706876075951-483d4d3d-c02f-45e5-aed5-18bc097a42a4-691719.png)
+![1706876075951-483d4d3d-c02f-45e5-aed5-18bc097a42a4.png](./img/6CQMBlz9kKa_dSzO/1706876075951-483d4d3d-c02f-45e5-aed5-18bc097a42a4-249511.png)
 
 ## 
 ## AOT之什么是GraalVM
-![1706877190779-25bc13af-f3ae-43db-a95d-bc7ac0925c73.png](./img/6CQMBlz9kKa_dSzO/1706877190779-25bc13af-f3ae-43db-a95d-bc7ac0925c73-599114.png)
+![1706877190779-25bc13af-f3ae-43db-a95d-bc7ac0925c73.png](./img/6CQMBlz9kKa_dSzO/1706877190779-25bc13af-f3ae-43db-a95d-bc7ac0925c73-538065.png)
 
 GraalVM旨在加速Java应用程序的性能，同时消耗更少的资源。GraalVM提供了两种运行Java应用程序的方式：在HotSpot JVM上使用Graal即时编译器或作为预先编译的本地可执行文件（AOT）。除了Java，它还提供了JavaScript、Ruby、Python和许多其他流行语言的运行时。GraalVM的多语言能力使得可以在单个应用程序中混合编程语言，同时消除不同语言之间调用的成本。
 
@@ -23,7 +23,7 @@ GraalVM文章推荐：[https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI3MDI5MjI
 ### 下载压缩包
 打开[https://github.com/graalvm/graalvm-ce-builds/releases](https://github.com/graalvm/graalvm-ce-builds/releases)，按JDK版本下载GraalVM对应的压缩包，请下载**<font style="color:#DF2A3F;">Java 17对应</font>**的版本，不然后面运行SpringBoot3可能会有问题。
 
-![1674881915492-21052c86-416b-4fa2-af46-57c86f0a5e3c.png](./img/6CQMBlz9kKa_dSzO/1674881915492-21052c86-416b-4fa2-af46-57c86f0a5e3c-684116.png)
+![1674881915492-21052c86-416b-4fa2-af46-57c86f0a5e3c.png](./img/6CQMBlz9kKa_dSzO/1674881915492-21052c86-416b-4fa2-af46-57c86f0a5e3c-327502.png)
 
 
 
@@ -33,12 +33,12 @@ windows的同学直接给大家：[附件: graalvm-ce-java17-windows-amd64-22.3.
 
 下载完后，就解压，
 
-![1674882320898-5c286799-3f25-4b7c-9546-ceedf60853d2.png](./img/6CQMBlz9kKa_dSzO/1674882320898-5c286799-3f25-4b7c-9546-ceedf60853d2-176843.png)
+![1674882320898-5c286799-3f25-4b7c-9546-ceedf60853d2.png](./img/6CQMBlz9kKa_dSzO/1674882320898-5c286799-3f25-4b7c-9546-ceedf60853d2-539710.png)
 
 
 
 ### 配置环境变量
-![1674882359831-9b51de12-af8c-43db-86a2-a2305847a67a.png](./img/6CQMBlz9kKa_dSzO/1674882359831-9b51de12-af8c-43db-86a2-a2305847a67a-877032.png)
+![1674882359831-9b51de12-af8c-43db-86a2-a2305847a67a.png](./img/6CQMBlz9kKa_dSzO/1674882359831-9b51de12-af8c-43db-86a2-a2305847a67a-395649.png)
 
 
 
@@ -46,7 +46,7 @@ windows的同学直接给大家：[附件: graalvm-ce-java17-windows-amd64-22.3.
 
 新开一个cmd测试：
 
-![1674882400517-e8dd6fe3-a2de-4daa-b98b-16ed1d7c4dd8.png](./img/6CQMBlz9kKa_dSzO/1674882400517-e8dd6fe3-a2de-4daa-b98b-16ed1d7c4dd8-409020.png)
+![1674882400517-e8dd6fe3-a2de-4daa-b98b-16ed1d7c4dd8.png](./img/6CQMBlz9kKa_dSzO/1674882400517-e8dd6fe3-a2de-4daa-b98b-16ed1d7c4dd8-266241.png)
 
 
 
@@ -57,7 +57,7 @@ windows的同学直接给大家：[附件: graalvm-ce-java17-windows-amd64-22.3.
 
 
 ### 安装<font style="color:rgb(41, 41, 41);">Visual Studio Build Tools</font>
-![1706877919680-7dd41864-6881-482d-a93f-2f8b9c7c94fc.png](./img/6CQMBlz9kKa_dSzO/1706877919680-7dd41864-6881-482d-a93f-2f8b9c7c94fc-344167.png)
+![1706877919680-7dd41864-6881-482d-a93f-2f8b9c7c94fc.png](./img/6CQMBlz9kKa_dSzO/1706877919680-7dd41864-6881-482d-a93f-2f8b9c7c94fc-605282.png)
 
  
 
@@ -69,7 +69,7 @@ windows的同学直接给大家：[附件: graalvm-ce-java17-windows-amd64-22.3.
 
 选择C++桌面开发，和Windows 11 SDK，然后进行下载和安装，安装后重启操作系统。
 
-![1667376372688-afaf73a0-cff8-47ba-88d6-cb933f1de807.png](./img/6CQMBlz9kKa_dSzO/1667376372688-afaf73a0-cff8-47ba-88d6-cb933f1de807-566434.png)
+![1667376372688-afaf73a0-cff8-47ba-88d6-cb933f1de807.png](./img/6CQMBlz9kKa_dSzO/1667376372688-afaf73a0-cff8-47ba-88d6-cb933f1de807-116239.png)
 
 ## 
 要使用GraalVM，不能使用普通的windows自带的命令行窗口，得使用VS提供的** x64 Native Tools Command Prompt for VS 2019**<font style="color:rgb(25, 30, 30);">，如果没</font>有可以执行`C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Auxiliary\Build\vcvars64.bat`脚本来安装。
@@ -82,15 +82,15 @@ windows的同学直接给大家：[附件: graalvm-ce-java17-windows-amd64-22.3.
 
 但是，如果后续在编译过程中编译失败了，出现以下错误：
 
-![1667381557684-4c0b495b-f060-42bd-8b35-74dde29f6053.png](./img/6CQMBlz9kKa_dSzO/1667381557684-4c0b495b-f060-42bd-8b35-74dde29f6053-659291.png)
+![1667381557684-4c0b495b-f060-42bd-8b35-74dde29f6053.png](./img/6CQMBlz9kKa_dSzO/1667381557684-4c0b495b-f060-42bd-8b35-74dde29f6053-184376.png)
 
 
 
-那么可以执行cl.exe，如果是中文，那就得修改为英文。![1667381088510-c36f8516-40a4-439e-8842-14488824b50d.png](./img/6CQMBlz9kKa_dSzO/1667381088510-c36f8516-40a4-439e-8842-14488824b50d-664291.png)
+那么可以执行cl.exe，如果是中文，那就得修改为英文。![1667381088510-c36f8516-40a4-439e-8842-14488824b50d.png](./img/6CQMBlz9kKa_dSzO/1667381088510-c36f8516-40a4-439e-8842-14488824b50d-105918.png)
 
 
 
-通过Visual Studio Installer来修改，比如：![1667380792427-a78963de-e179-4185-87f4-b43dee52805f.png](./img/6CQMBlz9kKa_dSzO/1667380792427-a78963de-e179-4185-87f4-b43dee52805f-715953.png)
+通过Visual Studio Installer来修改，比如：![1667380792427-a78963de-e179-4185-87f4-b43dee52805f.png](./img/6CQMBlz9kKa_dSzO/1667380792427-a78963de-e179-4185-87f4-b43dee52805f-990884.png)
 
 可能一开始只选择了中文，手动选择英文，去掉中文，然后安装即可。
 
@@ -98,7 +98,7 @@ windows的同学直接给大家：[附件: graalvm-ce-java17-windows-amd64-22.3.
 
 再次检查
 
-![1667381112626-a9b7a943-a323-489f-8dab-2faec430f23b.png](./img/6CQMBlz9kKa_dSzO/1667381112626-a9b7a943-a323-489f-8dab-2faec430f23b-679023.png)
+![1667381112626-a9b7a943-a323-489f-8dab-2faec430f23b.png](./img/6CQMBlz9kKa_dSzO/1667381112626-a9b7a943-a323-489f-8dab-2faec430f23b-648445.png)
 
 
 
@@ -107,11 +107,11 @@ windows的同学直接给大家：[附件: graalvm-ce-java17-windows-amd64-22.3.
 
 
 ### Hello World实战
-新建一个简单的Java工程：![1706878571539-07bff612-093a-4828-a23d-5386bee5c87c.png](./img/6CQMBlz9kKa_dSzO/1706878571539-07bff612-093a-4828-a23d-5386bee5c87c-701170.png)
+新建一个简单的Java工程：![1706878571539-07bff612-093a-4828-a23d-5386bee5c87c.png](./img/6CQMBlz9kKa_dSzO/1706878571539-07bff612-093a-4828-a23d-5386bee5c87c-625288.png)
 
 
 
-我们可以直接把graalvm当作普通的jdk的使用![1706881106445-e21eb950-6dc7-4cfc-8436-f11d439b164b.png](./img/6CQMBlz9kKa_dSzO/1706881106445-e21eb950-6dc7-4cfc-8436-f11d439b164b-116337.png)
+我们可以直接把graalvm当作普通的jdk的使用![1706881106445-e21eb950-6dc7-4cfc-8436-f11d439b164b.png](./img/6CQMBlz9kKa_dSzO/1706881106445-e21eb950-6dc7-4cfc-8436-f11d439b164b-062033.png)
 
 
 
@@ -119,15 +119,15 @@ windows的同学直接给大家：[附件: graalvm-ce-java17-windows-amd64-22.3.
 
 
 
-打开**x64 Native Tools Command Prompt for VS 2019**，进入工程目录下，并利用javac将java文件编译为class文件：`javac -d . src/com/xs/App.java`![1706878842765-945c5fe8-ad88-4032-ab94-72b35515de49.png](./img/6CQMBlz9kKa_dSzO/1706878842765-945c5fe8-ad88-4032-ab94-72b35515de49-547393.png)
+打开**x64 Native Tools Command Prompt for VS 2019**，进入工程目录下，并利用javac将java文件编译为class文件：`javac -d . src/com/xs/App.java`![1706878842765-945c5fe8-ad88-4032-ab94-72b35515de49.png](./img/6CQMBlz9kKa_dSzO/1706878842765-945c5fe8-ad88-4032-ab94-72b35515de49-825412.png)
 
 
 
-此时的class文件因为有main方法，所以用java命令可以运行![1706878849060-d01f8376-fcc5-41dc-85c4-b047bf7385e7.png](./img/6CQMBlz9kKa_dSzO/1706878849060-d01f8376-fcc5-41dc-85c4-b047bf7385e7-609479.png)
+此时的class文件因为有main方法，所以用java命令可以运行![1706878849060-d01f8376-fcc5-41dc-85c4-b047bf7385e7.png](./img/6CQMBlz9kKa_dSzO/1706878849060-d01f8376-fcc5-41dc-85c4-b047bf7385e7-511352.png)
 
 
 
-我们也可以利用native-image来编译：![1706880508724-02bc7ff3-ef9c-4260-9f30-933e686e65e1.png](./img/6CQMBlz9kKa_dSzO/1706880508724-02bc7ff3-ef9c-4260-9f30-933e686e65e1-841709.png)
+我们也可以利用native-image来编译：![1706880508724-02bc7ff3-ef9c-4260-9f30-933e686e65e1.png](./img/6CQMBlz9kKa_dSzO/1706880508724-02bc7ff3-ef9c-4260-9f30-933e686e65e1-011178.png)
 
  
 
@@ -135,13 +135,13 @@ windows的同学直接给大家：[附件: graalvm-ce-java17-windows-amd64-22.3.
 
 编译完了之后就会在当前目录生成一个exe文件：
 
-![1706880539714-06b90653-a77a-42b1-a5c5-5456bb1b5837.png](./img/6CQMBlz9kKa_dSzO/1706880539714-06b90653-a77a-42b1-a5c5-5456bb1b5837-083834.png)
+![1706880539714-06b90653-a77a-42b1-a5c5-5456bb1b5837.png](./img/6CQMBlz9kKa_dSzO/1706880539714-06b90653-a77a-42b1-a5c5-5456bb1b5837-731249.png)
 
 
 
 我们可以直接运行这个exe文件：
 
-![1706880586052-59a5614d-64d5-40f2-8928-ed018cedfb8c.png](./img/6CQMBlz9kKa_dSzO/1706880586052-59a5614d-64d5-40f2-8928-ed018cedfb8c-690747.png)
+![1706880586052-59a5614d-64d5-40f2-8928-ed018cedfb8c.png](./img/6CQMBlz9kKa_dSzO/1706880586052-59a5614d-64d5-40f2-8928-ed018cedfb8c-859285.png)
 
 
 
@@ -159,7 +159,7 @@ native-image com.xs.App -o app
 
 
 ## SpringBoot 3.0实战
-![1706877269328-4e095f70-6405-4bc0-8cca-0bcf9b277ab3.png](./img/6CQMBlz9kKa_dSzO/1706877269328-4e095f70-6405-4bc0-8cca-0bcf9b277ab3-224536.png)
+![1706877269328-4e095f70-6405-4bc0-8cca-0bcf9b277ab3.png](./img/6CQMBlz9kKa_dSzO/1706877269328-4e095f70-6405-4bc0-8cca-0bcf9b277ab3-562035.png)
 
 
 
@@ -245,9 +245,9 @@ public class MyApplication {
 
 编译完成截图：
 
-![1674886577242-eb087b22-2c8f-4722-9c9f-aa2224eefec6.png](./img/6CQMBlz9kKa_dSzO/1674886577242-eb087b22-2c8f-4722-9c9f-aa2224eefec6-489459.png)
+![1674886577242-eb087b22-2c8f-4722-9c9f-aa2224eefec6.png](./img/6CQMBlz9kKa_dSzO/1674886577242-eb087b22-2c8f-4722-9c9f-aa2224eefec6-093935.png)
 
-![1674886272625-a98cc341-028f-4f13-bdf6-d9d33a7c2820.png](./img/6CQMBlz9kKa_dSzO/1674886272625-a98cc341-028f-4f13-bdf6-d9d33a7c2820-550379.png)
+![1674886272625-a98cc341-028f-4f13-bdf6-d9d33a7c2820.png](./img/6CQMBlz9kKa_dSzO/1674886272625-a98cc341-028f-4f13-bdf6-d9d33a7c2820-812017.png)
 
 
 
@@ -311,7 +311,7 @@ public class UserService {
 
 在UserService中，通过反射的方式使用到了XushuService的无参构造方法（XushuService.class.newInstance()），如果我们不做任何处理，那么打成二进制可执行文件后是运行不了的，可执行文件中是没有XushuService的无参构造方法的，会报如下错误：
 
-![1676358866758-1f151037-fbd8-40c5-8c94-a40df9c3a730.png](./img/6CQMBlz9kKa_dSzO/1676358866758-1f151037-fbd8-40c5-8c94-a40df9c3a730-046780.png)
+![1676358866758-1f151037-fbd8-40c5-8c94-a40df9c3a730.png](./img/6CQMBlz9kKa_dSzO/1676358866758-1f151037-fbd8-40c5-8c94-a40df9c3a730-154465.png)
 
 
 
@@ -533,13 +533,13 @@ mvn -Pnative spring-boot:build-image
 
 来生成Docker镜像，成功截图：
 
-![1674887406333-ead0d092-6eda-4fd7-bef9-a6993b4a7057.png](./img/6CQMBlz9kKa_dSzO/1674887406333-ead0d092-6eda-4fd7-bef9-a6993b4a7057-627862.png)
+![1674887406333-ead0d092-6eda-4fd7-bef9-a6993b4a7057.png](./img/6CQMBlz9kKa_dSzO/1674887406333-ead0d092-6eda-4fd7-bef9-a6993b4a7057-586148.png)
 
 
 
 执行完之后，就能看到docker镜像了：
 
-![1669714081640-9753dab5-a80a-44da-abd2-3f34acd771e1.png](./img/6CQMBlz9kKa_dSzO/1669714081640-9753dab5-a80a-44da-abd2-3f34acd771e1-074473.png)
+![1669714081640-9753dab5-a80a-44da-abd2-3f34acd771e1.png](./img/6CQMBlz9kKa_dSzO/1669714081640-9753dab5-a80a-44da-abd2-3f34acd771e1-180632.png)
 
 
 
@@ -567,7 +567,7 @@ String methodName = System.getenv("methodName")
 
 建议工作中直接使用Environment来获取参数：
 
-![1676531756545-1b3bdc08-4650-4f50-a4e3-a32e07e7164d.png](./img/6CQMBlz9kKa_dSzO/1676531756545-1b3bdc08-4650-4f50-a4e3-a32e07e7164d-579911.png)
+![1676531756545-1b3bdc08-4650-4f50-a4e3-a32e07e7164d.png](./img/6CQMBlz9kKa_dSzO/1676531756545-1b3bdc08-4650-4f50-a4e3-a32e07e7164d-982693.png)
 
 
 

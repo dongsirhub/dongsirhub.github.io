@@ -8,7 +8,7 @@
 ### **<font style="color:rgb(18, 18, 18);">1、第一阶段：准备阶段</font>**
 <font style="color:rgb(18, 18, 18);">由事务协调者询问通知各个事务参与者，是否准备好了执行事务，具体流程图如下：</font>
 
-![1694354340399-4ac0a06f-1f5e-46db-8626-2ba059a845b9.png](./img/klGJV1kWIo4NcLmg/1694354340399-4ac0a06f-1f5e-46db-8626-2ba059a845b9-725697.png)
+![1694354340399-4ac0a06f-1f5e-46db-8626-2ba059a845b9.png](./img/klGJV1kWIo4NcLmg/1694354340399-4ac0a06f-1f5e-46db-8626-2ba059a845b9-446083.png)
 
 + <font style="color:rgb(18, 18, 18);">① 协调者向所有参与者发送事务内容，询问是否可以提交事务，并等待答复</font>
 + <font style="color:rgb(18, 18, 18);">② 各参与者执行本地事务操作，将 undo 和 redo 信息记入事务日志中（但不提交事务）</font>
@@ -30,7 +30,7 @@
 
 
 
-![1694354356474-cc2e6a1d-8eea-4d8f-8196-18725550e4b7.png](./img/klGJV1kWIo4NcLmg/1694354356474-cc2e6a1d-8eea-4d8f-8196-18725550e4b7-352256.png)
+![1694354356474-cc2e6a1d-8eea-4d8f-8196-18725550e4b7.png](./img/klGJV1kWIo4NcLmg/1694354356474-cc2e6a1d-8eea-4d8f-8196-18725550e4b7-584428.png)
 
 **<font style="color:rgb(18, 18, 18);">（2）事务回滚：</font>**
 
@@ -45,7 +45,7 @@
 
 
 
-<font style="color:rgb(153, 153, 153);"> </font>![1694354428092-b6aa0a15-da85-4ff8-834a-fb39a42579d4.png](./img/klGJV1kWIo4NcLmg/1694354428092-b6aa0a15-da85-4ff8-834a-fb39a42579d4-712471.png)
+<font style="color:rgb(153, 153, 153);"> </font>![1694354428092-b6aa0a15-da85-4ff8-834a-fb39a42579d4.png](./img/klGJV1kWIo4NcLmg/1694354428092-b6aa0a15-da85-4ff8-834a-fb39a42579d4-920186.png)
 
 ### **<font style="color:rgb(18, 18, 18);">3、2PC的缺点：</font>**
 <font style="color:rgb(18, 18, 18);">二阶段提交确实能够提供原子性的操作，但是不幸的是，二阶段提交还是有几个缺点的：</font>
@@ -66,7 +66,7 @@
 
 <font style="color:rgb(18, 18, 18);">所以3PC会分为3个阶段，CanCommit 准备阶段、PreCommit 预提交阶段、DoCommit 提交阶段，处理流程如下：</font>
 
-![1694354436418-3974b854-fc0c-45e7-87b1-4c1929bbaa24.png](./img/klGJV1kWIo4NcLmg/1694354436418-3974b854-fc0c-45e7-87b1-4c1929bbaa24-637739.png)
+![1694354436418-3974b854-fc0c-45e7-87b1-4c1929bbaa24.png](./img/klGJV1kWIo4NcLmg/1694354436418-3974b854-fc0c-45e7-87b1-4c1929bbaa24-830492.png)
 
 ### **<font style="color:rgb(18, 18, 18);">1、阶段一：CanCommit 准备阶段</font>**
 <font style="color:rgb(18, 18, 18);">协调者向参与者发送 canCommit 请求，参与者如果可以提交就返回Yes响应，否则返回No响应，具体流程如下：</font>
@@ -87,7 +87,7 @@
 
 
 
-![1694354451291-5069c960-d0da-45dc-b598-8e433c59f8d7.png](./img/klGJV1kWIo4NcLmg/1694354451291-5069c960-d0da-45dc-b598-8e433c59f8d7-867153.png)
+![1694354451291-5069c960-d0da-45dc-b598-8e433c59f8d7.png](./img/klGJV1kWIo4NcLmg/1694354451291-5069c960-d0da-45dc-b598-8e433c59f8d7-282508.png)
 
 **<font style="color:rgb(18, 18, 18);">（2）中断事务：</font>**
 
@@ -96,7 +96,7 @@
 + <font style="color:rgb(18, 18, 18);">① 发送中断请求 ：协调者向所有参与者发送 abort 请求。</font>
 + <font style="color:rgb(18, 18, 18);">② 中断事务 ：参与者收到来自协调者的 abort 请求之后（或超时之后，仍未收到协调者的请求），执行事务的中断。</font>
 
- ![1694354458478-572a142a-6bc4-431d-b493-123d6812ab49.png](./img/klGJV1kWIo4NcLmg/1694354458478-572a142a-6bc4-431d-b493-123d6812ab49-077915.png)
+ ![1694354458478-572a142a-6bc4-431d-b493-123d6812ab49.png](./img/klGJV1kWIo4NcLmg/1694354458478-572a142a-6bc4-431d-b493-123d6812ab49-346725.png)
 
 ### **<font style="color:rgb(18, 18, 18);">3、阶段三：doCommit阶段</font>**
 <font style="color:rgb(18, 18, 18);">该阶段进行真正的事务提交，也可以分为以下两种情况：</font>
@@ -108,7 +108,7 @@
 + <font style="color:rgb(18, 18, 18);">③ 响应反馈：事务提交完之后，向协调者发送ack响应。</font>
 + <font style="color:rgb(18, 18, 18);">④ 完成事务：协调者接收到所有参与者的ack响应之后，完成事务。</font>
 
-![1694354465603-8f1696b9-b997-44c3-b431-fba8381dd880.png](./img/klGJV1kWIo4NcLmg/1694354465603-8f1696b9-b997-44c3-b431-fba8381dd880-836533.png)
+![1694354465603-8f1696b9-b997-44c3-b431-fba8381dd880.png](./img/klGJV1kWIo4NcLmg/1694354465603-8f1696b9-b997-44c3-b431-fba8381dd880-877013.png)
 
 <font style="color:rgb(18, 18, 18);">**（2）中断事务：**任何一个参与者反馈 no，或者等待超时后协调者尚无法收到所有参与者的反馈，即中断事务</font>
 
@@ -117,7 +117,7 @@
 + <font style="color:rgb(18, 18, 18);">③ 反馈结果：参与者完成事务回滚之后，向协调者反馈ACK消息</font>
 + <font style="color:rgb(18, 18, 18);">④ 中断事务：协调者接收到参与者反馈的ACK消息之后，执行事务的中断。</font>
 
-![1694354476727-4b10c04b-c432-4167-9f1a-2a85feadc136.png](./img/klGJV1kWIo4NcLmg/1694354476727-4b10c04b-c432-4167-9f1a-2a85feadc136-159896.png)
+![1694354476727-4b10c04b-c432-4167-9f1a-2a85feadc136.png](./img/klGJV1kWIo4NcLmg/1694354476727-4b10c04b-c432-4167-9f1a-2a85feadc136-938523.png)
 
 <font style="color:rgb(18, 18, 18);">进入doCommit阶段后，无论协调者出现问题，或者协调者与参与者之间的网络出现问题，都会导致参与者无法接收到协调者发出的 doCommit 请求或 abort 请求。此时，参与者都会在等待超时之后，继续执行事务提交。这其实基于概率来决定的，当进入第三阶段时，说明第一阶段收到所有参与者的CanCommit响应都是Yes，意味着大家都同意修改了，并且第二阶段所有的参与者对协调者的PreCommit请求也都是同意的。所以，一句话概括就是，当进入第三阶段时，由于网络超时等原因，虽然参与者没有收到commit或者abort响应，但是他有理由相信：成功提交的几率很大。</font>
 
@@ -143,7 +143,7 @@
 + <font style="color:rgb(18, 18, 18);">Confirm：执行真正的业务（执行业务，释放锁）</font>
 + <font style="color:rgb(18, 18, 18);">Cancle：是对Try阶段预留资源的释放（出问题，释放锁）</font>
 
-![1694354487577-73b06b85-9ff7-4df2-9bd6-fafbd2fc4e9b.png](./img/klGJV1kWIo4NcLmg/1694354487577-73b06b85-9ff7-4df2-9bd6-fafbd2fc4e9b-400549.png)
+![1694354487577-73b06b85-9ff7-4df2-9bd6-fafbd2fc4e9b.png](./img/klGJV1kWIo4NcLmg/1694354487577-73b06b85-9ff7-4df2-9bd6-fafbd2fc4e9b-626569.png)
 
 ### **<font style="color:rgb(18, 18, 18);">3、TCC如何保证最终一致性：</font>**
 + <font style="color:rgb(18, 18, 18);">TCC 事务机制以 Try 为中心的，Confirm 确认操作和 Cancel 取消操作都是围绕 Try 而展开。因此，Try 阶段中的操作，其保障性是最好的，即使失败，仍然有 Cancel 取消操作可以将其执行结果撤销。</font>
@@ -156,7 +156,7 @@
 
 <font style="color:rgb(18, 18, 18);">空回滚出现的原因是 Try 超时或者丢包，导致 TCC 分布式事务二阶段的 回滚，触发 Cancel 操作，此时事务参与者未收到Try，但是却收到了Cancel 请求，如下图所示：</font>
 
-![1694354494810-156d6821-a355-48b9-af9f-0b5a277f2dc1.png](./img/klGJV1kWIo4NcLmg/1694354494810-156d6821-a355-48b9-af9f-0b5a277f2dc1-120227.png)
+![1694354494810-156d6821-a355-48b9-af9f-0b5a277f2dc1.png](./img/klGJV1kWIo4NcLmg/1694354494810-156d6821-a355-48b9-af9f-0b5a277f2dc1-841016.png)
 
 <font style="color:rgb(18, 18, 18);">所以 cancel 接口在实现时需要允许空回滚，也就是 Cancel 执行时如果发现没有对应的事务 xid 或主键时，需要返回回滚成功，让事务服务管理器认为已回滚。</font>
 
@@ -164,7 +164,7 @@
 
 <font style="color:rgb(18, 18, 18);">悬挂指的是二阶段的 Cancel 比 一阶段的Try 操作先执行，出现该问题的原因是 Try 由于网络拥堵而超时，导致事务管理器生成回滚，触发 Cancel 接口，但之后拥堵在网络的 Try 操作又被资源管理器收到了，但是 Cancel 比 Try 先到。但按照前面允许空回滚的逻辑，回滚会返回成功，事务管理器认为事务已回滚成功，所以此时应该拒绝执行空回滚之后到来的 Try 操作，否则会产生数据不一致。因此我们可以在 Cancel 空回滚返回成功之前，先记录该条事务 xid 或业务主键，标识这条记录已经回滚过，Try 接口执行前先检查这条事务xid或业务主键是否已经标记为回滚成功，如果是则不执行 Try 的业务操作。</font>
 
-![1694354505787-772832ba-794e-4826-97b0-355fda758c0c.png](./img/klGJV1kWIo4NcLmg/1694354505787-772832ba-794e-4826-97b0-355fda758c0c-584303.png)
+![1694354505787-772832ba-794e-4826-97b0-355fda758c0c.png](./img/klGJV1kWIo4NcLmg/1694354505787-772832ba-794e-4826-97b0-355fda758c0c-389683.png)
 
 **<font style="color:rgb(18, 18, 18);">（3）幂等控制：</font>**
 
@@ -195,7 +195,7 @@
 
 <font style="color:rgb(18, 18, 18);">当执行事务失败时，补偿所有已完成的事务，是“一退到底”的方式，这种做法的效果是撤销掉之前所有成功的子事务，使得整个 Saga 的执行结果撤销。如下图：</font>
 
-![1694354516975-74835070-db0e-4d23-85fe-0b5e7bfcc425.png](./img/klGJV1kWIo4NcLmg/1694354516975-74835070-db0e-4d23-85fe-0b5e7bfcc425-161220.png)
+![1694354516975-74835070-db0e-4d23-85fe-0b5e7bfcc425.png](./img/klGJV1kWIo4NcLmg/1694354516975-74835070-db0e-4d23-85fe-0b5e7bfcc425-764256.png)
 
 <font style="color:rgb(18, 18, 18);">从上图可知事务执行到了支付事务T3，但是失败了，因此事务回滚需要从C3,C2,C1依次进行回滚补偿，对应的执行顺序为：T1,T2,T3,C3,C2,C1。</font>
 
@@ -203,7 +203,7 @@
 
 <font style="color:rgb(18, 18, 18);">对于执行不通过的事务，会尝试重试事务，这里有一个假设就是每个子事务最终都会成功，这种方式适用于必须要成功的场景，事务失败了重试，不需要补偿。流程如下图：</font>
 
-![1694354528823-4d1847af-8142-4830-86ea-f0e7840cf10e.png](./img/klGJV1kWIo4NcLmg/1694354528823-4d1847af-8142-4830-86ea-f0e7840cf10e-856444.png)
+![1694354528823-4d1847af-8142-4830-86ea-f0e7840cf10e.png](./img/klGJV1kWIo4NcLmg/1694354528823-4d1847af-8142-4830-86ea-f0e7840cf10e-519378.png)
 
 ### **<font style="color:rgb(18, 18, 18);">3、Saga事务的实现方式：</font>**
 <font style="color:rgb(18, 18, 18);">Saga事务有两种不同的实现方式，分别如下：</font>
@@ -215,7 +215,7 @@
 
 <font style="color:rgb(18, 18, 18);">中央协调器（Orchestrator，简称 OSO）以命令/回复的方式与每项服务进行通信，全权负责告诉每个参与者该做什么以及什么时候该做什么。整体流程如下图：</font>
 
- ![1694354547424-4b3fab0b-fecd-438e-a8f3-ac50e6fd1a6b.png](./img/klGJV1kWIo4NcLmg/1694354547424-4b3fab0b-fecd-438e-a8f3-ac50e6fd1a6b-503484.png)
+ ![1694354547424-4b3fab0b-fecd-438e-a8f3-ac50e6fd1a6b.png](./img/klGJV1kWIo4NcLmg/1694354547424-4b3fab0b-fecd-438e-a8f3-ac50e6fd1a6b-944030.png)
 
 + <font style="color:rgb(18, 18, 18);">① 事务发起方的主业务逻辑请求 OSO 服务开启订单事务</font>
 + <font style="color:rgb(18, 18, 18);">② OSO 向库存服务请求扣减库存，库存服务回复处理结果。</font>
@@ -231,7 +231,7 @@
 
 <font style="color:rgb(18, 18, 18);">在事件编排方法中，第一个服务执行一个事务，然后发布一个事件，该事件被一个或多个服务进行监听，这些服务再执行本地事务并发布（或不发布）新的事件。当最后一个服务执行本地事务并且不发布任何事件时，意味着分布式事务结束，或者它发布的事件没有被任何 Saga 参与者听到都意味着事务结束。</font>
 
- ![1694354555279-287d4db2-83dd-4829-8b99-dcf10ea708ae.png](./img/klGJV1kWIo4NcLmg/1694354555279-287d4db2-83dd-4829-8b99-dcf10ea708ae-277494.png)
+ ![1694354555279-287d4db2-83dd-4829-8b99-dcf10ea708ae.png](./img/klGJV1kWIo4NcLmg/1694354555279-287d4db2-83dd-4829-8b99-dcf10ea708ae-252294.png)
 
 + <font style="color:rgb(18, 18, 18);">① 事务发起方的主业务逻辑发布开始订单事件。</font>
 + <font style="color:rgb(18, 18, 18);">② 库存服务监听开始订单事件，扣减库存，并发布库存已扣减事件。</font>
@@ -280,7 +280,7 @@
 + <font style="color:rgb(18, 18, 18);">业务处理失败、事务消息发送成功</font>
 
 ### **<font style="color:rgb(18, 18, 18);">2、本地消息表的执行流程：</font>**
-![1694354563085-603affc8-7655-4cc9-9302-f289f1b75d7c.png](./img/klGJV1kWIo4NcLmg/1694354563085-603affc8-7655-4cc9-9302-f289f1b75d7c-741477.png)
+![1694354563085-603affc8-7655-4cc9-9302-f289f1b75d7c.png](./img/klGJV1kWIo4NcLmg/1694354563085-603affc8-7655-4cc9-9302-f289f1b75d7c-069147.png)
 
 + <font style="color:rgb(18, 18, 18);">① 事务主动方在同一个本地事务中处理业务和写消息表操作</font>
 + <font style="color:rgb(18, 18, 18);">② 事务主动方通过消息中间件，通知事务被动方处理事务消息。消息中间件可以基于 Kafka、RocketMQ 消息队列，事务主动方主动写消息到消息队列，事务消费方消费并处理消息队列中的消息。</font>
@@ -310,14 +310,14 @@
 ### **<font style="color:rgb(18, 18, 18);">1、MQ事务消息的执行流程：</font>**
 <font style="color:rgb(18, 18, 18);">基于MQ的分布式事务方案本质上是对本地消息表的封装，整体流程与本地消息表一致，唯一不同的就是将本地消息表存在了MQ内部，而不是业务数据库中，如下图：</font>
 
-![1694354571003-c38afa49-3f11-439a-a746-738da03e0801.png](./img/klGJV1kWIo4NcLmg/1694354571003-c38afa49-3f11-439a-a746-738da03e0801-069518.png)
+![1694354571003-c38afa49-3f11-439a-a746-738da03e0801.png](./img/klGJV1kWIo4NcLmg/1694354571003-c38afa49-3f11-439a-a746-738da03e0801-108668.png)
 
 <font style="color:rgb(18, 18, 18);">由于将本地消息表存在了MQ内部，那么MQ内部的处理尤为重要，下面主要基于 RocketMQ4.3 之后的版本介绍 MQ 的分布式事务方案</font>
 
 ### **<font style="color:rgb(18, 18, 18);">2、RocketMQ事务消息：</font>**
 <font style="color:rgb(18, 18, 18);">在本地消息表方案中，保证事务主动方发写业务表数据和写消息表数据的一致性是基于数据库事务，而 RocketMQ 的事务消息相对于普通 MQ提供了 2PC 的提交接口，方案如下：</font>
 
-![1694354577463-627e2ff4-539d-4d59-9ddf-998e927ebf1f.png](./img/klGJV1kWIo4NcLmg/1694354577463-627e2ff4-539d-4d59-9ddf-998e927ebf1f-535182.png)
+![1694354577463-627e2ff4-539d-4d59-9ddf-998e927ebf1f.png](./img/klGJV1kWIo4NcLmg/1694354577463-627e2ff4-539d-4d59-9ddf-998e927ebf1f-731042.png)
 
 **<font style="color:rgb(18, 18, 18);">（1）正常情况：</font>**
 
@@ -352,7 +352,7 @@
 ## **<font style="color:rgb(18, 18, 18);">七、最大努力通知：</font>**
 <font style="color:rgb(18, 18, 18);">最大努力通知也称为定期校对，是对MQ事务方案的进一步优化。它在事务主动方增加了消息校对的接口，如果事务被动方没有接收到主动方发送的消息，此时可以调用事务主动方提供的消息校对的接口主动获取</font>
 
-![1694354585155-97c5d9ae-51f5-4374-887a-95c1f23f0454.png](./img/klGJV1kWIo4NcLmg/1694354585155-97c5d9ae-51f5-4374-887a-95c1f23f0454-461649.png)
+![1694354585155-97c5d9ae-51f5-4374-887a-95c1f23f0454.png](./img/klGJV1kWIo4NcLmg/1694354585155-97c5d9ae-51f5-4374-887a-95c1f23f0454-662907.png)
 
 <font style="color:rgb(18, 18, 18);">在可靠消息事务中，事务主动方需要将消息发送出去，并且让接收方成功接收消息，这种可靠性发送是由事务主动方保证的；但是最大努力通知，事务主动方仅仅是尽最大努力（重试，轮询....）将事务发送给事务接收方，所以存在事务被动方接收不到消息的情况，此时需要事务被动方主动调用事务主动方的消息校对接口查询业务消息并消费，这种通知的可靠性是由事务被动方保证的。</font>
 

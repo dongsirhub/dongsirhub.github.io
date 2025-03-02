@@ -1,13 +1,13 @@
 # Hibernate淘汰了？只是你不会用而已！
 
-不知道大家在整合SpringBoot+MyBatis有没有想过， 为什么SpringBoot不提供MyBatis的官方Starter呢？你以为是为了和SpringDataJPA竞争？![不不不](./img/RAxy--OG6f3qRMzO/1638257283336-dc83d7ff-e1c4-45c2-9a82-c130b0e9110c-946397.png)：
+不知道大家在整合SpringBoot+MyBatis有没有想过， 为什么SpringBoot不提供MyBatis的官方Starter呢？你以为是为了和SpringDataJPA竞争？![不不不](./img/RAxy--OG6f3qRMzO/1638257283336-dc83d7ff-e1c4-45c2-9a82-c130b0e9110c-312467.png)：
 
 
 
 首先Hibernate才是正统的JPA血脉！JPA（Java Persistence API ）是JDK钦点的ORM规范！  
 那SpringBoot要做ORM框架肯定跟着JDK玩，毕竟JDK才是整个java的标准，所以SpringBoot会选择Hibernate作为SpringDataJPA的ORM实现框架也理所当然。  
 MyBatis？根本算不上ORM框架，不过是一个封装了JDBC的持久化框架！SpringBoot我都不愿意跟你玩，你对标的应该是我的JDBCTemplate，我都有一个封装了JDBC的组件干嘛还跟你玩，你要跟我玩自己写Starter来适配我! 这才是真正的原因！  
-![屏幕前的你](./img/RAxy--OG6f3qRMzO/1638257160129-e157f79c-6e23-4d61-a36d-307c8449c156-233000.png)  
+![屏幕前的你](./img/RAxy--OG6f3qRMzO/1638257160129-e157f79c-6e23-4d61-a36d-307c8449c156-309332.png)  
 我知道你看完还是无法打动你，我们来比较一下Hibernate VS  MyBatis：
 
 
@@ -21,7 +21,7 @@ MyBatis？根本算不上ORM框架，不过是一个封装了JDBC的持久化框
 
 Hibernate 是一个对象关系映射框架 (ORM)，它将 Java 类映射到数据库表。  
 MyBatis 是一个持久化框架——不是 ORM。它将 SQL 语句映射到 Java 方法。  
-![1638252715561-4f54c8a1-285a-4afb-ab9e-8dbe5236f2a7.png](./img/RAxy--OG6f3qRMzO/1638252715561-4f54c8a1-285a-4afb-ab9e-8dbe5236f2a7-177138.png)
+![1638252715561-4f54c8a1-285a-4afb-ab9e-8dbe5236f2a7.png](./img/RAxy--OG6f3qRMzO/1638252715561-4f54c8a1-285a-4afb-ab9e-8dbe5236f2a7-240076.png)
 
 
 
@@ -84,7 +84,7 @@ MyBatis 用于
 
 
 
-![1638255932565-becbd792-a918-4f11-957b-5df25aaf359b.png](./img/RAxy--OG6f3qRMzO/1638255932565-becbd792-a918-4f11-957b-5df25aaf359b-852902.png)
+![1638255932565-becbd792-a918-4f11-957b-5df25aaf359b.png](./img/RAxy--OG6f3qRMzO/1638255932565-becbd792-a918-4f11-957b-5df25aaf359b-653967.png)
 
 
 
@@ -141,7 +141,7 @@ PagingAndSortingRepository<Customer,Long>   //1.实现分页排序和CRUD
 
 
 第5种更多规定方法名对照表：  
-![1638261708769-5aa4d54c-164a-49e4-8db9-0f96992ea669.png](./img/RAxy--OG6f3qRMzO/1638261708769-5aa4d54c-164a-49e4-8db9-0f96992ea669-219112.png)  
+![1638261708769-5aa4d54c-164a-49e4-8db9-0f96992ea669.png](./img/RAxy--OG6f3qRMzO/1638261708769-5aa4d54c-164a-49e4-8db9-0f96992ea669-350325.png)  
 **使用：**  
 直接调用持久化方法即可、无需依赖任何代码生成器
 

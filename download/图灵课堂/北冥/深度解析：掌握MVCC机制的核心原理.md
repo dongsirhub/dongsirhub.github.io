@@ -4,7 +4,7 @@
 
 上一讲和大家聊到，隔离性本质上是因为同时存在多个并发事务可能会导致脏读、幻读等情况。
 
-![1680157573957-b40fefce-a3d7-475b-916c-ef36c92d48f1.png](./img/h0JesvUSUbaP_m0t/1680157573957-b40fefce-a3d7-475b-916c-ef36c92d48f1-865959.png)
+![1680157573957-b40fefce-a3d7-475b-916c-ef36c92d48f1.png](./img/h0JesvUSUbaP_m0t/1680157573957-b40fefce-a3d7-475b-916c-ef36c92d48f1-496855.png)
 
 要解决并发问题只有一种方案就是加锁。当然，锁不可避免的会导致性能下降，但是，锁也有乐观和悲观之分，上一讲我们聊到的，隔离级别中的串行化就是一种悲观的思想，可以直接避免并发事务中所有的问题，但是性能也是下降的非常严重。而`MySQL`是如何在性能和一致性中权衡的呢？我们接着往下看。
 
@@ -24,17 +24,17 @@ MVCC全称（多版本并发控制），本质就是通过一种乐观锁的思�
 
 InnoDB 里面每个事务有一个唯一的事务 ID，叫作 transaction id。它是在事务开始的时候向 InnoDB 的事务系统申请的，是按申请顺序严格递增的。
 
-![1680071884160-c066d323-0ea4-4b3f-8f09-3ea38ce3330f.png](./img/h0JesvUSUbaP_m0t/1680071884160-c066d323-0ea4-4b3f-8f09-3ea38ce3330f-383306.png)
+![1680071884160-c066d323-0ea4-4b3f-8f09-3ea38ce3330f.png](./img/h0JesvUSUbaP_m0t/1680071884160-c066d323-0ea4-4b3f-8f09-3ea38ce3330f-473709.png)
 
 如上图所示，针对`id=10001`的这条数据，都会将旧值放到一条`undo`日志中，就算是该记录的一个旧版本，随着更新次数的增多，所有的版本都会被 `roll_pointer` 属性连接成一个链表，我们把这个链表称之为**版本链**，根据版本链就可以找到这条数据历史的版本。
 
-![1680089702903-13895075-6e1a-47b4-b0f2-a299b7176d4e.png](./img/h0JesvUSUbaP_m0t/1680089702903-13895075-6e1a-47b4-b0f2-a299b7176d4e-782902.png)
+![1680089702903-13895075-6e1a-47b4-b0f2-a299b7176d4e.png](./img/h0JesvUSUbaP_m0t/1680089702903-13895075-6e1a-47b4-b0f2-a299b7176d4e-288954.png)
 
 利用`undo log`日志我们已经保留下了数据的各个版本，那么现在关键的问题是要读取哪个版本的数据呢？
 
 这时就需要用到ReadView了，ReadView就是事务在使用MVCC机制进行快照读操作时产生的一致性视图, 比如针对可重复读隔离级别，是在事务启动的时候，创建一个ReadView, 那ReadView种都有哪些关键信息呢？
 
-![1680095929852-60ae40d0-a547-44dd-b419-677e29347107.png](./img/h0JesvUSUbaP_m0t/1680095929852-60ae40d0-a547-44dd-b419-677e29347107-704929.png)
+![1680095929852-60ae40d0-a547-44dd-b419-677e29347107.png](./img/h0JesvUSUbaP_m0t/1680095929852-60ae40d0-a547-44dd-b419-677e29347107-184523.png)
 
 
 
@@ -45,7 +45,7 @@ InnoDB 里面每个事务有一个唯一的事务 ID，叫作 transaction id。�
 
 
 
-![1680095960762-04342929-209b-4705-b013-a77e6c294eda.png](./img/h0JesvUSUbaP_m0t/1680095960762-04342929-209b-4705-b013-a77e6c294eda-953100.png)
+![1680095960762-04342929-209b-4705-b013-a77e6c294eda.png](./img/h0JesvUSUbaP_m0t/1680095960762-04342929-209b-4705-b013-a77e6c294eda-015294.png)
 
 
 
@@ -96,9 +96,9 @@ begin
 SELECT * FROM student WHERE id = 10001;
 ```
 
-![1680179062059-b0d38f09-c952-4985-8a6b-c4e4006d70d9.png](./img/h0JesvUSUbaP_m0t/1680179062059-b0d38f09-c952-4985-8a6b-c4e4006d70d9-753873.png)
+![1680179062059-b0d38f09-c952-4985-8a6b-c4e4006d70d9.png](./img/h0JesvUSUbaP_m0t/1680179062059-b0d38f09-c952-4985-8a6b-c4e4006d70d9-107513.png)
 
-![1680179084203-0d51bb36-caff-423f-a7b0-c3f49dbef6bc.png](./img/h0JesvUSUbaP_m0t/1680179084203-0d51bb36-caff-423f-a7b0-c3f49dbef6bc-633537.png)
+![1680179084203-0d51bb36-caff-423f-a7b0-c3f49dbef6bc.png](./img/h0JesvUSUbaP_m0t/1680179084203-0d51bb36-caff-423f-a7b0-c3f49dbef6bc-742263.png)
 
 
 
@@ -129,11 +129,11 @@ SELECT * FROM student WHERE id = 10001;
 
 <font style="color:rgb(27, 27, 27);">读已提交</font>`<font style="color:rgb(27, 27, 27);">READ COMMITTED</font>`<font style="color:rgb(27, 27, 27);">是每次读取数据前都生成一个</font>`<font style="color:rgb(27, 27, 27);">ReadView</font>`<font style="color:rgb(27, 27, 27);">。</font>
 
-![1680176728820-fd131d06-d868-4aef-951c-e195acf4e2cc.png](./img/h0JesvUSUbaP_m0t/1680176728820-fd131d06-d868-4aef-951c-e195acf4e2cc-858365.png)
+![1680176728820-fd131d06-d868-4aef-951c-e195acf4e2cc.png](./img/h0JesvUSUbaP_m0t/1680176728820-fd131d06-d868-4aef-951c-e195acf4e2cc-000200.png)
 
 <font style="color:rgb(27, 27, 27);"></font>
 
-![1680180052328-998ea2ad-345a-41d6-b37a-036fcb0f5223.png](./img/h0JesvUSUbaP_m0t/1680180052328-998ea2ad-345a-41d6-b37a-036fcb0f5223-707809.png)
+![1680180052328-998ea2ad-345a-41d6-b37a-036fcb0f5223.png](./img/h0JesvUSUbaP_m0t/1680180052328-998ea2ad-345a-41d6-b37a-036fcb0f5223-220208.png)
 
 <font style="color:rgb(27, 27, 27);">这里重点介绍了</font>`<font style="color:rgb(27, 27, 27);">MVCC</font>`<font style="color:rgb(27, 27, 27);">机制，以及 </font>`<font style="color:rgb(27, 27, 27);">MVCC</font>`<font style="color:rgb(27, 27, 27);"> 在 </font>`<font style="color:rgb(27, 27, 27);">READ COMMITTD</font>`<font style="color:rgb(27, 27, 27);">、 </font>`<font style="color:rgb(27, 27, 27);">REPEATABLE READ</font>`<font style="color:rgb(27, 27, 27);"> 这两种隔离级别的事务在执行快照读操作时访问记录的版本链的过程。这样使不同事务的 </font>`<font style="color:rgb(27, 27, 27);">读-写</font>`<font style="color:rgb(27, 27, 27);"> 、 </font>`<font style="color:rgb(27, 27, 27);">写-读</font>`<font style="color:rgb(27, 27, 27);"> 操作并发执行，从而提升系统性能。</font>
 

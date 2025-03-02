@@ -7,19 +7,19 @@
 
 # 2.消息队列有哪些作用和应用场景
 ## 2.1应用解耦
-![画板](./img/-PfNXzHHUMXkuRwt/1679381902766-c74e12be-9563-415c-9186-b035736b7024-174248.jpeg)
+![画板](./img/-PfNXzHHUMXkuRwt/1679381902766-c74e12be-9563-415c-9186-b035736b7024-586221.jpeg)
 
 1. 传统模式下，如果库存系统异常无法访问，会导致下单失败；或者随着公司业务拓展，物流系统也需要接入下单信息，此时订单系统还需要增加调用物流系统的接口
 2. 引入消息队列，用户下单后，将消息写入消息队列，返回下单成功；库存和物流系统通过订阅下单消息，<font style="color:rgb(77, 77, 77);">获取下单信息，库存系统根据下单信息进行库存扣减操作，物流系统根据下单信息生成物流单；即使此时库存系统无法访问，但是不会影响下单流程。当库存系统恢复后可以正常消费消息</font>
 
 ## 2.2异步提速
-![画板](./img/-PfNXzHHUMXkuRwt/1679659026105-24c6a9a1-d235-44dd-9988-65e13033e5d1-844328.jpeg)
+![画板](./img/-PfNXzHHUMXkuRwt/1679659026105-24c6a9a1-d235-44dd-9988-65e13033e5d1-507548.jpeg)
 
 1. 传统模式下，用户从注册到响应成功，需要先保存注册信息，再发送邮件通知，邮件发送成功后再发送短息通知，短息发送成功后才响应给用户，用户体验不好
 2. 引入MQ后，保存用户信息后，短信通知和邮件通知消息写入MQ(此过程耗时比较短)。极大的缩短了响应时间。增强用户体验
 
 ## 2.3流量削峰
-![画板](./img/-PfNXzHHUMXkuRwt/1679383801662-08be4dda-f6b9-4f1c-8d7e-fa5bb43a6a95-582340.jpeg)
+![画板](./img/-PfNXzHHUMXkuRwt/1679383801662-08be4dda-f6b9-4f1c-8d7e-fa5bb43a6a95-805372.jpeg)
 
 
 
@@ -95,7 +95,7 @@ rabbitmqctl set_permissions -p "/" admin ".*" ".*" ".*"
 rabbitmqctl list_users
 
 # 5.<font style="color:rgb(77, 77, 77);">RabbitMQ</font>的工作原理
-![画板](./img/-PfNXzHHUMXkuRwt/1678967699278-d95f770e-fd52-4686-83b6-23bdb3f812ca-420235.jpeg)
+![画板](./img/-PfNXzHHUMXkuRwt/1678967699278-d95f770e-fd52-4686-83b6-23bdb3f812ca-235995.jpeg)
 
 **Broker**：接收和分发消息的应用，RabbitMQ Server 就是 Message Broker
 
@@ -260,14 +260,14 @@ public class Consumer {
 
 <font style="color:rgb(18, 18, 18);">比如：如果一个队列绑定到交换机要求路由键为“key”，则只转发RoutingKey标记为“key”的消息，不会转发"key1"，也不会转发“key.1”等等。它是完全匹配、单播的模式</font>
 
-![画板](./img/-PfNXzHHUMXkuRwt/1679310864234-c192ec99-527b-4817-ae45-1a7c6b4f03c9-351491.jpeg)
+![画板](./img/-PfNXzHHUMXkuRwt/1679310864234-c192ec99-527b-4817-ae45-1a7c6b4f03c9-240131.jpeg)
 
 	<font style="color:rgb(18, 18, 18);">同一个key可以绑定多个queue队列；当匹配到key1时，queue1和queue2都可以收到消息</font>
 
 ## <font style="color:rgb(51, 51, 51);">7.2 fanout</font>
 <font style="color:rgb(18, 18, 18);">Fanout，扇出类型交换机，此种交换机，会将消息分发给所有绑定了此交换机的队列，此时RoutingKey参数无效。</font>
 
-![画板](./img/-PfNXzHHUMXkuRwt/1679299526347-dc96e5ca-a196-4ebe-8f24-63c276f8cab8-840122.jpeg)
+![画板](./img/-PfNXzHHUMXkuRwt/1679299526347-dc96e5ca-a196-4ebe-8f24-63c276f8cab8-250992.jpeg)
 
 <font style="color:rgb(18, 18, 18);">fanout类型交换机下发送消息一条，无论RoutingKey是什么，queue1,queue2,queue3,queue4都可以收到消息</font>
 
@@ -278,7 +278,7 @@ public class Consumer {
 2. <font style="color:rgb(51, 51, 51);">"*"：代表一个部分</font>
 3. <font style="color:rgb(51, 51, 51);">"#"：代表0个或多个部分(</font><font style="color:rgb(18, 18, 18);">如果绑定的路由键为 "#" 时，则接受所有消息，因为路由键所有都匹配</font><font style="color:rgb(51, 51, 51);">)</font>
 
-![画板](./img/-PfNXzHHUMXkuRwt/1679313568104-6eebced7-abee-473f-a2af-e3c00a2794c6-475662.jpeg)
+![画板](./img/-PfNXzHHUMXkuRwt/1679313568104-6eebced7-abee-473f-a2af-e3c00a2794c6-813611.jpeg)
 
 <font style="color:rgb(51, 51, 51);">然后发送一条信息，routingkey为"key1.key2.key3.key4"，那么根据"."将这个路由键分为了4个部分，此条路由键，将会匹配：</font>
 
@@ -299,13 +299,13 @@ public class Consumer {
 1. <font style="color:rgb(0, 0, 0);">x-match = all ：表示所有的键值对都匹配才能接受到消息</font>
 2. <font style="color:rgb(0, 0, 0);">x-match = any ：表示只要有键值对匹配就能接受到消息</font>
 
-![画板](./img/-PfNXzHHUMXkuRwt/1679379682943-2cfaff1f-91a3-4088-b49c-41259d584fbc-260455.jpeg)
+![画板](./img/-PfNXzHHUMXkuRwt/1679379682943-2cfaff1f-91a3-4088-b49c-41259d584fbc-873879.jpeg)
 
 发送消息时间，如果其他参数信息是{ "name":"xiaochuanXX", "sex":"男" }，因为queue2的x-match是any，只需要有一个键值对匹配所以就能接收到消息，所以queue2可以接收到消息；queue1的x-match是all，需要所有的键值对都匹配才能接收到消息，所以此时queue1接收不到消息  
 	
 
 # 8.<font style="color:rgb(77, 77, 77);">RabbitMQ</font>集群搭建
-![画板](./img/-PfNXzHHUMXkuRwt/1679906995507-05cfcd7c-99bb-437a-be21-f25c5293de40-720394.jpeg)
+![画板](./img/-PfNXzHHUMXkuRwt/1679906995507-05cfcd7c-99bb-437a-be21-f25c5293de40-794440.jpeg)
 
 1. 首先通过克隆的方式，从第一台安装好<font style="color:rgb(77, 77, 77);">RabbitMQ</font>的服务器环境克隆出两台机器
 2. 修改克隆出的2台RabbitMq服务器的Ip地址，修改IP(可不修改，通过ifconfig或者ip addr查看ip地址)  
@@ -399,7 +399,7 @@ public class Consumer {
 + <font style="color:rgb(34, 34, 34);">想要解决这个问题，需要开启队列镜像，将集群中的队列彼此之间进行镜像，此时消息就会被拷贝到处于同一个镜像分组中的所有队列上。</font>
 
 ## 9.2 管理界面配置参数
-![1679409065969-b13e5760-bb38-4139-8a50-acfbca9da7bb.png](./img/-PfNXzHHUMXkuRwt/1679409065969-b13e5760-bb38-4139-8a50-acfbca9da7bb-614593.png)
+![1679409065969-b13e5760-bb38-4139-8a50-acfbca9da7bb.png](./img/-PfNXzHHUMXkuRwt/1679409065969-b13e5760-bb38-4139-8a50-acfbca9da7bb-983792.png)
 
 **参数解释**：
 
@@ -421,7 +421,7 @@ public class Consumer {
 + <font style="color:rgb(77, 77, 77);">一种高效、可靠、免费的高可用及</font>**<font style="color:rgb(77, 77, 77);">负载均衡</font>**<font style="color:rgb(77, 77, 77);">软件，非常适合于高负载站点的七层数据请求。客户端通过Haproxy代理服务器获得站点页面，而代理服务器收到客户请求后根据负载均衡的规则将请求数据转发给后端真实服务器</font>
 + <font style="color:rgb(77, 77, 77);">实现了一种事件驱动、单一进程模型，能支持非常大的并发连接数</font>
 
-![画板](./img/-PfNXzHHUMXkuRwt/1679901377928-9c929545-7af5-45ae-b3f9-14c968a76e90-304185.jpeg)
+![画板](./img/-PfNXzHHUMXkuRwt/1679901377928-9c929545-7af5-45ae-b3f9-14c968a76e90-806101.jpeg)
 
 ## 10.2安装HAProxy
 1. 下载依赖包

@@ -31,7 +31,7 @@ Drone 与流行的源代码管理系统无缝集成，包括 GitHub、GitHub Ent
 ## 自动化流程
 
 
-![18fb0bf1-a25a-458a-be3b-8d811a826367.png](./img/KkTmSgIvzJplZ_oD/1723963772140-9597e289-16e5-4425-8d04-99b84a989b42-870197.png)
+![18fb0bf1-a25a-458a-be3b-8d811a826367.png](./img/KkTmSgIvzJplZ_oD/1723963772140-9597e289-16e5-4425-8d04-99b84a989b42-272651.png)
 
 
 
@@ -50,15 +50,15 @@ Drone 与流行的源代码管理系统无缝集成，包括 GitHub、GitHub Ent
 ### 配置Gitee第三方授权
 
 
-![042da93c-50a4-4397-ab44-07ad9a51abc1.png](./img/KkTmSgIvzJplZ_oD/1723963772069-5ed99c95-dbec-4e22-8f2d-219096573af8-440696.png)
+![042da93c-50a4-4397-ab44-07ad9a51abc1.png](./img/KkTmSgIvzJplZ_oD/1723963772069-5ed99c95-dbec-4e22-8f2d-219096573af8-080928.png)
 
 
 
-![38b08673-050b-42b6-adfc-6ca6dd8c3f9b.png](./img/KkTmSgIvzJplZ_oD/1723963772110-434370e0-031a-4b73-9666-40ba622f8a19-000206.png)
+![38b08673-050b-42b6-adfc-6ca6dd8c3f9b.png](./img/KkTmSgIvzJplZ_oD/1723963772110-434370e0-031a-4b73-9666-40ba622f8a19-625577.png)
 
 
 
-![565541e9-c005-4cb8-a315-eefa1c6c97f9.png](./img/KkTmSgIvzJplZ_oD/1723963772120-688a4123-747d-499d-baf4-13653a955e33-199610.png)
+![565541e9-c005-4cb8-a315-eefa1c6c97f9.png](./img/KkTmSgIvzJplZ_oD/1723963772120-688a4123-747d-499d-baf4-13653a955e33-849845.png)
 
 
 
@@ -236,15 +236,15 @@ ENTRYPOINT ["java", "-jar", "beiming-talk-backend-0.0.1-SNAPSHOT.jar"]
 ## 效果演示
 
 
-![6422972f-8901-48ef-80b3-46327d68a871.png](./img/KkTmSgIvzJplZ_oD/1723963772083-ee43fc3e-589e-4863-b0d0-787aa61ea18d-823476.png)
+![6422972f-8901-48ef-80b3-46327d68a871.png](./img/KkTmSgIvzJplZ_oD/1723963772083-ee43fc3e-589e-4863-b0d0-787aa61ea18d-925411.png)
 
 
 
-![56af44da-50db-48d6-8ffd-5d32b4564984.png](./img/KkTmSgIvzJplZ_oD/1723963772100-a31d2bca-1c4f-48ad-a7ee-11f23fe00a60-142511.png)
+![56af44da-50db-48d6-8ffd-5d32b4564984.png](./img/KkTmSgIvzJplZ_oD/1723963772100-a31d2bca-1c4f-48ad-a7ee-11f23fe00a60-544867.png)
 
 
 
-![66e4d363-3ec9-4f76-bac0-b1bcd4c542b3.png](./img/KkTmSgIvzJplZ_oD/1723963772100-74e44757-a4c1-426a-af1b-e127eb1abb50-838590.png)
+![66e4d363-3ec9-4f76-bac0-b1bcd4c542b3.png](./img/KkTmSgIvzJplZ_oD/1723963772100-74e44757-a4c1-426a-af1b-e127eb1abb50-542481.png)
 
 
 

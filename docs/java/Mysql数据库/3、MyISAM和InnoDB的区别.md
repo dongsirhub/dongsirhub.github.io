@@ -1,0 +1,17 @@
+# 3、MyISAM 和 InnoDB 的区别
+
+| | MyISAM | InnoDB |
+| --- | :--- | :--- |
+| 事务 | 不支持 | 支持 |
+| 锁 | 表锁 | 表锁、行锁 |
+
+
+| 文件存储 | 3 个 | 1 个 |
+| :--- | :--- | :--- |
+| 外键 | 不支持 | 支持 |
+
+
+
+
+> 更新: 2024-05-01 16:16:11  
+> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/hirl29c2x9khy5nm>

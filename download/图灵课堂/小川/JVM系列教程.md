@@ -5,10 +5,10 @@
 + JVM是一种用于计算设备的规范，它是一个虚构出来的计算机，是通过在实际的计算机上仿真模拟各种计算机功能来实现的。
 + 引入Java语言虚拟机后，Java语言在不同平台上运行时不需要重新编译。Java语言使用Java虚拟机屏蔽了与具体平台相关的信息，使得Java语言编译程序只需生成在Java虚拟机上运行的目标代码（字节码），就可以在多种平台上不加修改地运行。
 
-![1681205356903-fedd8401-8480-4dbc-a5fa-bdd01111939c.png](./img/d-BZCkX5_Ztm5WNM/1681205356903-fedd8401-8480-4dbc-a5fa-bdd01111939c-498504.png)
+![1681205356903-fedd8401-8480-4dbc-a5fa-bdd01111939c.png](./img/d-BZCkX5_Ztm5WNM/1681205356903-fedd8401-8480-4dbc-a5fa-bdd01111939c-342585.png)
 
 # JVM的结构体系
-![1680253857917-75ff4ea8-d257-4250-a05c-eb85453636cf.png](./img/d-BZCkX5_Ztm5WNM/1680253857917-75ff4ea8-d257-4250-a05c-eb85453636cf-593242.png)
+![1680253857917-75ff4ea8-d257-4250-a05c-eb85453636cf.png](./img/d-BZCkX5_Ztm5WNM/1680253857917-75ff4ea8-d257-4250-a05c-eb85453636cf-170373.png)
 
 + 类加载子系统：类加载子系统就是把Class文件加载进内存
 + 运行时数据区(内存模型)：
@@ -24,7 +24,7 @@
 
 # 类加载器
 ## 类加载器流程
-![1680435514841-9f2fc933-8bad-4023-8fd0-dca9e8c91d13.png](./img/d-BZCkX5_Ztm5WNM/1680435514841-9f2fc933-8bad-4023-8fd0-dca9e8c91d13-474937.png)
+![1680435514841-9f2fc933-8bad-4023-8fd0-dca9e8c91d13.png](./img/d-BZCkX5_Ztm5WNM/1680435514841-9f2fc933-8bad-4023-8fd0-dca9e8c91d13-438886.png)
 
 + **作用**
     - 类加载器子系统负责从文件系统或者网络中加载 class 文件，class 文件在文件开头有特定的文件标识。
@@ -69,12 +69,12 @@
 + 避免类的重复加载
 + 防止核心API被篡改
 
-![1680424537997-7294db68-acd6-4d0d-9abb-3790c1a878c3.png](./img/d-BZCkX5_Ztm5WNM/1680424537997-7294db68-acd6-4d0d-9abb-3790c1a878c3-126367.png)
+![1680424537997-7294db68-acd6-4d0d-9abb-3790c1a878c3.png](./img/d-BZCkX5_Ztm5WNM/1680424537997-7294db68-acd6-4d0d-9abb-3790c1a878c3-735035.png)
 
 <font style="color:rgb(77, 77, 77);">可以看到，报错在java.lang.String中找不到类方法。因为String类是启动类加载器创建的，不是我们自定义的String类，故没有main方法。</font>
 
 # 运行时数据区
-![1680435554547-d57a8daa-909a-4ffe-b483-5f490cdaaeb7.png](./img/d-BZCkX5_Ztm5WNM/1680435554547-d57a8daa-909a-4ffe-b483-5f490cdaaeb7-114380.png)
+![1680435554547-d57a8daa-909a-4ffe-b483-5f490cdaaeb7.png](./img/d-BZCkX5_Ztm5WNM/1680435554547-d57a8daa-909a-4ffe-b483-5f490cdaaeb7-013681.png)
 
 ## 程序计数器
 ### 概念
@@ -88,7 +88,7 @@
 
 ## Java方法栈
 ### Java方法栈结构
-![1681048494547-8ce31b84-0989-499a-9050-15774db43c28.png](./img/d-BZCkX5_Ztm5WNM/1681048494547-8ce31b84-0989-499a-9050-15774db43c28-476438.png)
+![1681048494547-8ce31b84-0989-499a-9050-15774db43c28.png](./img/d-BZCkX5_Ztm5WNM/1681048494547-8ce31b84-0989-499a-9050-15774db43c28-877831.png)
 
 1. Java方法栈是线程私有的
 2. 一个方法开始执行时栈帧入栈，执行完后栈帧出栈，所以Java方法栈不需要垃圾回收
@@ -119,7 +119,7 @@
 ## 堆
 一个JVM实例只有一个堆内存，堆也是Java内存管理的最重要的区域，堆在JVM启动的时候创建，其空间大小也被创建，是JVM中最大的一块内存空间，所有线程共享Java堆，几乎所有的实例都在这里分配内存（**Java规范中规定所有的对象和数组都存放到在堆中，在执行字节码指令时会把创建的对象存入堆中，对象对应的引用地址存入虚拟机栈的栈帧中**），在方法结束后，堆中的对象不会马上删除，仅仅在垃圾收集的时候被删除，堆是GC（垃圾收集器）执行垃圾回收的重点区域
 
-![1681107948294-63a9c849-0eab-4820-8035-fdbd76698804.png](./img/d-BZCkX5_Ztm5WNM/1681107948294-63a9c849-0eab-4820-8035-fdbd76698804-817921.png)
+![1681107948294-63a9c849-0eab-4820-8035-fdbd76698804.png](./img/d-BZCkX5_Ztm5WNM/1681107948294-63a9c849-0eab-4820-8035-fdbd76698804-659358.png)
 
 1. <font style="color:rgba(0, 0, 0, 0.9);background-color:rgb(251, 251, 251);">JVM运行时堆的大小</font>
     1. **<font style="color:rgba(0, 0, 0, 0.9);background-color:rgb(251, 251, 251);">-Xms</font>**<font style="color:rgba(0, 0, 0, 0.9);background-color:rgb(251, 251, 251);">堆的最小值</font> （ms:memory start,指定堆初始化内存大小）
@@ -173,7 +173,7 @@ public class ReferenceCountJvm {
 #### 可达性分析法
 + <font style="color:rgba(0, 0, 0, 0.9);background-color:rgb(251, 251, 251);">通过一系列被称为「GC Roots」的根对象作为起始节点集，从这些节点开始，通过引用关系向下搜寻，搜寻走过的路径称为「引用链」，如果某个对象到GC Roots没有任何引用链相连，就说明该对象不可达，即可以被回收。</font>
 
-![1680505278121-aa619848-b90c-4407-8afc-1abd71d5fcf4.png](./img/d-BZCkX5_Ztm5WNM/1680505278121-aa619848-b90c-4407-8afc-1abd71d5fcf4-788969.png)
+![1680505278121-aa619848-b90c-4407-8afc-1abd71d5fcf4.png](./img/d-BZCkX5_Ztm5WNM/1680505278121-aa619848-b90c-4407-8afc-1abd71d5fcf4-387231.png)
 
 + <font style="color:rgb(36, 41, 46);">可以作为GC Roots的主要有四种对象：</font>
     - <font style="color:rgb(36, 41, 46);">方法区中类静态属性引用的对象</font>
@@ -190,7 +190,7 @@ public class ReferenceCountJvm {
 + <font style="color:rgb(61, 70, 77);">标记：标记的过程其实就是，遍历所有的GC Roots，然后将所有GC Roots可达的对象标记为存活的对象。 </font>
 + <font style="color:rgb(61, 70, 77);"> 清除：清除的过程将遍历堆中所有的对象，将没有标记的对象全部清除掉。 </font>
 
-![画板](./img/d-BZCkX5_Ztm5WNM/1680507257675-a0bc2f29-8bef-412e-8a7b-1ed6bcb82588-799542.jpeg)
+![画板](./img/d-BZCkX5_Ztm5WNM/1680507257675-a0bc2f29-8bef-412e-8a7b-1ed6bcb82588-670609.jpeg)
 
 + <font style="color:rgb(18, 18, 18);">特点：实现简单</font>
 + <font style="color:rgb(18, 18, 18);">缺点：效率不高、存在内存空间太强片化问题。</font>
@@ -198,7 +198,7 @@ public class ReferenceCountJvm {
 #### 标记-复制算法
 **概念**：<font style="color:rgb(18, 18, 18);">将内存空间分为多个块，每次只使用其中一个块。在进行垃圾回收时，该算法会将可达对象复制到另一个未被使用的内存块中，然后清除当前内存块中的所有对象。随后，算法会交换使用两个内存块，并重复执行垃圾回收操作，直到所有内存都被充分利用。这种算法被称为二分垃圾回收算法 (Binary Space 垃圾回收算法)。</font>
 
-![画板](./img/d-BZCkX5_Ztm5WNM/1680507463646-ecf0cbd9-69cd-4f29-a3bc-053579dbfcfe-723327.jpeg)
+![画板](./img/d-BZCkX5_Ztm5WNM/1680507463646-ecf0cbd9-69cd-4f29-a3bc-053579dbfcfe-753457.jpeg)
 
 + <font style="color:rgb(18, 18, 18);">优点：空间连续无碎片化、清除高效;</font>
 + <font style="color:rgb(18, 18, 18);">缺点：</font>
@@ -209,7 +209,7 @@ public class ReferenceCountJvm {
 #### 标记-整理算法
 **概念**：对“标记 - 清除”的改进。“标记 - 整理”算法的标记过程与“标记 - 清除”算法相同，但后续步骤不是直接对可回收对象进行清理，而是让所有存活的对象都向一端移动，然后直接清理掉端边界以外的内存。
 
-![画板](./img/d-BZCkX5_Ztm5WNM/1680508531789-218f19c2-dc2c-4723-b90d-232796a73931-233303.jpeg)
+![画板](./img/d-BZCkX5_Ztm5WNM/1680508531789-218f19c2-dc2c-4723-b90d-232796a73931-238682.jpeg)
 
 + 优点：
     - 没有内存碎片
@@ -255,7 +255,7 @@ public class ReferenceCountJvm {
     - -XX:HeapDumpOnOutOfMemoryError=/temp/heapdump.hprof		dump堆内存信息存放目录
 + <font style="color:rgb(77, 77, 77);">推荐使用</font>visualvm，当然也可以用 <font style="color:rgb(77, 77, 77);">Jprofiler，MAT</font>
 
-![1680527299650-f362a12b-36d3-4588-92ca-6b6920764b08.png](./img/d-BZCkX5_Ztm5WNM/1680527299650-f362a12b-36d3-4588-92ca-6b6920764b08-863915.png)
+![1680527299650-f362a12b-36d3-4588-92ca-6b6920764b08.png](./img/d-BZCkX5_Ztm5WNM/1680527299650-f362a12b-36d3-4588-92ca-6b6920764b08-753617.png)
 
 # 你用过哪些JDK自带的命令工具
 ## 1.jps

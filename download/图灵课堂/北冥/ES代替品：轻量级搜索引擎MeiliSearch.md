@@ -11,7 +11,7 @@
 
 
 
-![a6575989-d78f-4cb8-bc7c-8c78466fbc0b.png](./img/ZJ95qC7CPbqKotaB/1723963788754-924fc111-fe99-4e81-9a80-45288095525a-084318.png)
+![a6575989-d78f-4cb8-bc7c-8c78466fbc0b.png](./img/ZJ95qC7CPbqKotaB/1723963788754-924fc111-fe99-4e81-9a80-45288095525a-522556.png)
 
 
 
@@ -205,7 +205,7 @@ curl  -X POST 'http://localhost:7700/indexes/movies/documents?primaryKey=id'   -
 ### 效果查看
 
 
-![a9da3354-2029-4422-95f8-2e435924bb60.png](./img/ZJ95qC7CPbqKotaB/1723963788813-cf13874a-e8dd-4647-beeb-325943c69fc6-464902.png)
+![a9da3354-2029-4422-95f8-2e435924bb60.png](./img/ZJ95qC7CPbqKotaB/1723963788813-cf13874a-e8dd-4647-beeb-325943c69fc6-914439.png)
 
 
 

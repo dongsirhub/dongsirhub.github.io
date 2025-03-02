@@ -81,7 +81,7 @@ INSERT INTO increnment_test (col1, col2, col3)
 select * from increnment_test;
 ```
 
-![1682324106016-8417f4a6-ba8d-476c-bd0b-fda14b6b75ae.png](./img/Hfau9hRq6JTiQCGj/1682324106016-8417f4a6-ba8d-476c-bd0b-fda14b6b75ae-414073.png)
+![1682324106016-8417f4a6-ba8d-476c-bd0b-fda14b6b75ae.png](./img/Hfau9hRq6JTiQCGj/1682324106016-8417f4a6-ba8d-476c-bd0b-fda14b6b75ae-237729.png)
 
 #### 5.1.2.插入col1为3的数据
 ```plsql
@@ -89,7 +89,7 @@ INSERT INTO increnment_test (col1, col2, col3) VALUES
 		(3, 3, 3);
 ```
 
-![1682324091738-82b8c3f7-6c99-40ff-8a2c-3b5aae810236.png](./img/Hfau9hRq6JTiQCGj/1682324091738-82b8c3f7-6c99-40ff-8a2c-3b5aae810236-144776.png)
+![1682324091738-82b8c3f7-6c99-40ff-8a2c-3b5aae810236.png](./img/Hfau9hRq6JTiQCGj/1682324091738-82b8c3f7-6c99-40ff-8a2c-3b5aae810236-615069.png)
 
 #### 5.1.3.插入col1为4的记录
 ```plsql
@@ -98,7 +98,7 @@ INSERT INTO increnment_test (col1, col2, col3) VALUES
 select * from increnment_test;
 ```
 
-![1682325663382-6a7ee876-1781-47bb-8b7f-d07ff18d494d.png](./img/Hfau9hRq6JTiQCGj/1682325663382-6a7ee876-1781-47bb-8b7f-d07ff18d494d-605493.png)
+![1682325663382-6a7ee876-1781-47bb-8b7f-d07ff18d494d.png](./img/Hfau9hRq6JTiQCGj/1682325663382-6a7ee876-1781-47bb-8b7f-d07ff18d494d-050345.png)
 
 ### 5.2.事务回滚
 开启一个事务插入col1为6的数据，然后进行回滚。回滚后重新插入col1为6的记录，此时col1为6对应的id值为7。
@@ -115,7 +115,7 @@ INSERT INTO increnment_test (col1, col2, col3) VALUES
 COMMIT; 
 ```
 
-![1682325715073-bb87fd0f-d233-4ef7-8784-5fa6c70d556e.png](./img/Hfau9hRq6JTiQCGj/1682325715073-bb87fd0f-d233-4ef7-8784-5fa6c70d556e-481939.png)
+![1682325715073-bb87fd0f-d233-4ef7-8784-5fa6c70d556e.png](./img/Hfau9hRq6JTiQCGj/1682325715073-bb87fd0f-d233-4ef7-8784-5fa6c70d556e-451611.png)
 
 ### 5.3.批量插入数据
 对于批量插入数据的语句，MySQL有一个批量申请自增 id 的策略：
@@ -139,7 +139,7 @@ VALUES (8, 8, 8);
 SELECT * FROM increnment_test2; 
 ```
 
-![1682325747417-ae0ef2fa-8ec6-4a0b-a1ed-4c2d3522f44f.png](./img/Hfau9hRq6JTiQCGj/1682325747417-ae0ef2fa-8ec6-4a0b-a1ed-4c2d3522f44f-577654.png)
+![1682325747417-ae0ef2fa-8ec6-4a0b-a1ed-4c2d3522f44f.png](./img/Hfau9hRq6JTiQCGj/1682325747417-ae0ef2fa-8ec6-4a0b-a1ed-4c2d3522f44f-468116.png)
 
 因为increnment_test2表中批量插入了5条数据，按照自增ID的批量申请策略，5条数据分3次进行申请：
 
