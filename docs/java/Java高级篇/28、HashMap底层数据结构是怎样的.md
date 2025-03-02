@@ -13,4 +13,4 @@ HashMap内部维护了一个Entry数组，用于存储键值对对象Entry。数
 
 
 > 更新: 2024-05-02 13:08:45  
-> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/ygiiggww90z767b5>
+> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/ygiiggww90z767b5>

@@ -44,4 +44,4 @@ Mysq|索引使用的是B+树，因为索引是用来加快查询的，而B+树�
 
 
 > 更新: 2024-05-01 16:18:53  
-> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/bg2tpr9zezg4wwme>
+> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/bg2tpr9zezg4wwme>

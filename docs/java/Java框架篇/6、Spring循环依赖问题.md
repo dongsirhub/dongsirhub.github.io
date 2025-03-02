@@ -153,4 +153,4 @@ Spring 解决循环依赖依靠的是Bean 的"中间态"这个概念，而这个
 
 
 > 更新: 2024-05-03 22:58:49  
-> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/vrwttcsg3ab1bvtq>
+> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/vrwttcsg3ab1bvtq>

@@ -13,4 +13,4 @@ l volatile 标记的变量不会被编译器优化，synchronized 标记的变�
 
 
 > 更新: 2024-04-30 18:35:15  
-> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/fmm97enig862nwkz>
+> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/fmm97enig862nwkz>

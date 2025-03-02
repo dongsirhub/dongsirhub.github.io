@@ -51,4 +51,4 @@ JDK1.8 之前 HashMap 由 数组+链表 组成的，数组是 HashMap 的主体�
 
 
 > 更新: 2024-04-30 16:47:16  
-> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/xhy94v5aaku8zf0r>
+> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/xhy94v5aaku8zf0r>

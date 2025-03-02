@@ -11,4 +11,4 @@ Spring AOP全称是面向切面编程，是Spring框架的一个重要特性，�
 
 
 > 更新: 2024-05-02 13:08:26  
-> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/gikmalgg7e0awszh>
+> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/gikmalgg7e0awszh>

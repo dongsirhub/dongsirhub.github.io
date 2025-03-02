@@ -21,4 +21,4 @@ Nacos 注册中心分为server 与client，server 采用Java 编写，为client 
 
 
 > 更新: 2024-05-01 16:06:35  
-> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/vygi74py7aln8g2e>
+> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/vygi74py7aln8g2e>

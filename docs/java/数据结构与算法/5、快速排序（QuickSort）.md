@@ -75,4 +75,4 @@ public class QuickSort {
 
 
 > 更新: 2024-05-01 16:48:35  
-> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/kacwcitolf6rbetm>
+> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/kacwcitolf6rbetm>

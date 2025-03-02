@@ -7,4 +7,4 @@ hashtable 类基本上所有的方法都是采用synchronized 进行线程安全
 
 
 > 更新: 2024-04-30 18:28:51  
-> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/shb26quz06vfr3x7>
+> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/shb26quz06vfr3x7>

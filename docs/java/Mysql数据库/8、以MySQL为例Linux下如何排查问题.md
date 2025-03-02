@@ -60,4 +60,4 @@ Extra 常见的值：usingfilesort 使用磁盘排序算法进行排序，事关
 
 
 > 更新: 2024-05-01 16:20:02  
-> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/aoq2sv97vnbg2i2x>
+> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/aoq2sv97vnbg2i2x>

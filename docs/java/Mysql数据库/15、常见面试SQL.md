@@ -207,4 +207,4 @@ mysql 创建了一个联合索引(a,b,c) 以下索引生效的是(1,2,4）
 
 
 > 更新: 2024-05-01 16:25:19  
-> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/gvca8twgogore7go>
+> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/gvca8twgogore7go>

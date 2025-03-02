@@ -7,4 +7,4 @@ Spring Boot 是Spring 的一套快速配置脚手架，可以基于Spring Boot �
 
 
 > 更新: 2024-05-01 16:05:35  
-> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/osfu7x1idkgigb9g>
+> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/osfu7x1idkgigb9g>

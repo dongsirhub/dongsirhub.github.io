@@ -17,4 +17,4 @@ MySQL索引底层结构使用B+树的主要原因有以下几点：
 
 
 > 更新: 2024-05-02 13:11:39  
-> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/tpoy2e8nq4o56ff0>
+> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/tpoy2e8nq4o56ff0>

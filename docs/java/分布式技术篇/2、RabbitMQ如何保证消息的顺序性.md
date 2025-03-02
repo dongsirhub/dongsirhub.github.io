@@ -37,4 +37,4 @@ RabbitMQ：①一个queue，有多个consumer 去消费，这样就会造成顺�
 
 
 > 更新: 2024-05-01 16:31:15  
-> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/ytzkb5kca4qexgyq>
+> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/ytzkb5kca4qexgyq>

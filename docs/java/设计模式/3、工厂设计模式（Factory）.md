@@ -364,4 +364,4 @@ public class HongMiFactory implements PhoneFactory {
 
 
 > 更新: 2024-05-01 16:54:40  
-> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/np9foega6pfvpedo>
+> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/np9foega6pfvpedo>

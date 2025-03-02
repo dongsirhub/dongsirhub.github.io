@@ -59,4 +59,4 @@ Java 的原子类都存放在并发包java.util.concurrent.atomic 下，如下�
 
 
 > 更新: 2024-04-30 18:22:13  
-> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/ppd9b7ykdys1ne5a>
+> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/ppd9b7ykdys1ne5a>

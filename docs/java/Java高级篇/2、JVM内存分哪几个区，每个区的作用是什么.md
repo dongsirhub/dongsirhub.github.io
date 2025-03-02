@@ -47,4 +47,4 @@ java 堆是所有线程所共享的一块内存，在虚拟机启动时创建，
 
 
 > 更新: 2024-04-30 16:54:25  
-> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/xyatzafra6u0vszb>
+> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/xyatzafra6u0vszb>

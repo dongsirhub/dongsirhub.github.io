@@ -25,4 +25,4 @@ ThreadLocal的常用场景包括：
 
 
 > 更新: 2024-05-02 13:15:10  
-> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/vgi277pz68qxa74d>
+> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/vgi277pz68qxa74d>

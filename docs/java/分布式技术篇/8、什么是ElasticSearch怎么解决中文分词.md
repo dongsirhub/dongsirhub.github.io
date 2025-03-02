@@ -7,4 +7,4 @@ Elasticsearch 是一个基于Lucene 的搜索引擎。它提供了具有HTTP Web
 
 
 > 更新: 2024-05-01 16:33:39  
-> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/oifk21nxf2okx3g0>
+> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/oifk21nxf2okx3g0>

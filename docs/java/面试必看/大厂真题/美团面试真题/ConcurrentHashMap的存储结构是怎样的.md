@@ -7,4 +7,4 @@ Java8 中的 ConcurrnetHashMap 使用的 Synchronized 锁加 CAS 的机制。结
 
 
 > 更新: 2024-05-02 13:12:00  
-> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/nyh89bwcerya4t5a>
+> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/nyh89bwcerya4t5a>

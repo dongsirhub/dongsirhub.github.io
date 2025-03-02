@@ -7,4 +7,4 @@ volatile 禁止了指令重排，可以保证程序执行的有序性，但是�
 
 
 > 更新: 2024-04-30 18:34:54  
-> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/vk0kf1m8d5qicin7>
+> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/vk0kf1m8d5qicin7>

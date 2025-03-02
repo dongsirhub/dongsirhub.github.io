@@ -80,4 +80,4 @@ loadrunner 测试大量运行次数求出平均值） **拒绝策略：**
 
 
 > 更新: 2024-04-30 18:21:04  
-> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/de8t73c5hk0zt8id>
+> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/de8t73c5hk0zt8id>

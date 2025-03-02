@@ -19,4 +19,4 @@ Mybatis 在处理${}时，就是把${}替换成变量的值；
 
 
 > 更新: 2024-05-01 16:00:50  
-> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/gyay7mtt143r8cdy>
+> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/gyay7mtt143r8cdy>

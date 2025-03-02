@@ -56,4 +56,4 @@ Singleton 通过将构造方法限定为private 避免了类在外部被实例�
 
 
 > 更新: 2024-05-01 16:52:28  
-> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/na3tcl3qm8enoiyb>
+> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/na3tcl3qm8enoiyb>
