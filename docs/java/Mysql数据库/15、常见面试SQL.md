@@ -4,21 +4,21 @@
 
 用一条SQL 语句查询出每门课都大于80 分的学生姓名
 
-name kecheng	fenshu
+name kecheng fenshu
 
-张三	语文	81
+张三 语文 81
 
-张三	数学	75
+张三 数学 75
 
-李四	语文	76
+李四 语文 76
 
-李四	数学	90
+李四 数学 90
 
-王五	语文	81
+王五 语文 81
 
-王五	数学	100
+王五 数学 100
 
-王五	英语	90
+王五 英语 90
 
 **<font style="color:rgb(233,30,44);">答</font>****<font style="color:rgb(233,30,44);">1</font>****<font style="color:rgb(233,30,44);">：</font>**
 
@@ -28,26 +28,18 @@ name kecheng	fenshu
 
 **<font style="color:rgb(5,117,197);">select</font>****<font style="color:rgb(5,117,197);"> </font>****<font style="color:rgb(5,117,197);">name</font>****<font style="color:rgb(5,117,197);"> </font>****<font style="color:rgb(5,117,197);">from</font>****<font style="color:rgb(5,117,197);"> </font>****<font style="color:rgb(5,117,197);">table</font>****<font style="color:rgb(5,117,197);"> </font>****<font style="color:rgb(5,117,197);">group</font>****<font style="color:rgb(5,117,197);"> </font>****<font style="color:rgb(5,117,197);">by</font>****<font style="color:rgb(5,117,197);"> </font>****<font style="color:rgb(5,117,197);">name having</font>****<font style="color:rgb(5,117,197);"> </font>****<font style="color:rgb(5,117,197);">min</font>**<font style="color:rgb(32,36,41);">(fenshu)>80</font>
 
-
-
 **例****2****：**
 
 学生表如下:
 
-自动编号	学号	姓名	课程编号	课程名称	分数
-
-
+自动编号 学号 姓名 课程编号 课程名称 分数
 
 | 1 | 2005001 | 张三 | 0001 | 数学 | 69 |
 | :--- | ---: | ---: | :--- | :---: | ---: |
 | 2 | 2005002 | 李四 | 0001 | 数学 | 89 |
 | 3 | 2005001 | 张三 | 0001 | 数学 | 69 |
 
-
 删除除了自动编号不同，其他都相同的学生冗余信息**<font style="color:rgb(233,30,44);">答：</font>**
-
-  
-
 
 ****
 
@@ -80,19 +72,18 @@ name kecheng	fenshu
 | 怎么把这样一个表 | | | | | | | |
 | :--- | --- | --- | --- | --- | --- | --- | --- |
 | year | month amount | | | | | | |
-| 1991	1 | 1.1 | | | | | | |
-| 1991	2 | 1.2 | | | | | | |
-| 1991	3 | 1.3 | | | | | | |
-| 1991	4 | 1.4 | | | | | | |
-| 1992	1 | 2.1 | | | | | | |
-| 1992	2 | 2.2 | | | | | | |
-| 1992	3 | 2.3 | | | | | | |
-| 1992	4 | 2.4 | | | | | | |
+| 1991 1 | 1.1 | | | | | | |
+| 1991 2 | 1.2 | | | | | | |
+| 1991 3 | 1.3 | | | | | | |
+| 1991 4 | 1.4 | | | | | | |
+| 1992 1 | 2.1 | | | | | | |
+| 1992 2 | 2.2 | | | | | | |
+| 1992 3 | 2.3 | | | | | | |
+| 1992 4 | 2.4 | | | | | | |
 | 查成这样一个结果 | | | | | | | |
-| year<br/>1991	1.1 | m1 | ****<br/>1.2 | m2 | ****<br/>1.3 | m3 | ****<br/>1.4 | m4 |
-| 1992	2.1 |  | 2.2 |  | 2.3 |  | 2.4 |  |
+| year<br/>1991 1.1 | m1 | ****<br/>1.2 | m2 | ****<br/>1.3 | m3 | ****<br/>1.4 | m4 |
+| 1992 2.1 |  | 2.2 |  | 2.3 |  | 2.4 |  |
 | **<font style="color:rgb(233,30,44);">答：</font>** |  |  |  |  |  |  |  |
-
 
 <font style="color:rgb(5,117,197);">1.</font><font style="color:rgb(5,117,197);"> </font>**<font style="color:rgb(5,117,197);">select</font>****<font style="color:rgb(5,117,197);"> </font>**<font style="color:rgb(199,20,182);">year</font><font style="color:rgb(32,36,41);">,</font>
 
@@ -105,8 +96,6 @@ name kecheng	fenshu
 <font style="color:rgb(32,36,41);">5.</font><font style="color:rgb(32,36,41);"> </font><font style="color:rgb(32,36,41);">(</font>**<font style="color:rgb(5,117,197);">select</font>****<font style="color:rgb(5,117,197);"> </font>**<font style="color:rgb(32,36,41);">amount</font><font style="color:rgb(32,36,41);"> </font>**<font style="color:rgb(5,117,197);">from</font>****<font style="color:rgb(5,117,197);"> </font>**<font style="color:rgb(32,36,41);">aaa</font><font style="color:rgb(32,36,41);"> </font><font style="color:rgb(32,36,41);">m</font><font style="color:rgb(32,36,41);"> </font>**<font style="color:rgb(5,117,197);">where</font>****<font style="color:rgb(5,117,197);"> </font>**<font style="color:rgb(199,20,182);">month</font><font style="color:rgb(32,36,41);">=4</font><font style="color:rgb(32,36,41);"> </font><font style="color:rgb(139,139,139);">and</font><font style="color:rgb(139,139,139);"> </font><font style="color:rgb(32,36,41);">m.</font><font style="color:rgb(199,20,182);">year</font><font style="color:rgb(32,36,41);">=aaa.</font><font style="color:rgb(199,20,182);">year</font><font style="color:rgb(32,36,41);">)</font><font style="color:rgb(32,36,41);"> </font>**<font style="color:rgb(5,117,197);">as</font>****<font style="color:rgb(5,117,197);"> </font>**<font style="color:rgb(32,36,41);">m4</font>
 
 <font style="color:rgb(5,117,197);">6.</font><font style="color:rgb(5,117,197);"> </font>**<font style="color:rgb(5,117,197);">from</font>****<font style="color:rgb(5,117,197);"> </font>**<font style="color:rgb(32,36,41);">aaa</font><font style="color:rgb(32,36,41);"> </font>**<font style="color:rgb(5,117,197);">group</font>****<font style="color:rgb(5,117,197);"> </font>****<font style="color:rgb(5,117,197);">by</font>****<font style="color:rgb(5,117,197);"> </font>**<font style="color:rgb(199,20,182);">year</font>
-
-
 
 **例5：**
 
@@ -124,36 +113,23 @@ SQL:
 
 <font style="color:rgb(5,117,197);">3. </font>**<font style="color:rgb(5,117,197);">Select </font>**<font style="color:rgb(32,36,41);">* </font>**<font style="color:rgb(5,117,197);">from </font>**<font style="color:rgb(32,36,41);">a </font>**<font style="color:rgb(5,117,197);">where </font>**<font style="color:rgb(32,36,41);">1=2</font>
 
-
-
 [<>（不等于）(SQL Server Compact)
-
-
 
 比较两个表达式。当使用此运算符比较非空表达式时，如果左操作数不等于右操作数，则结果为TRUE。否则，结果为FALSE。]
 
-
-
 为了便于阅读,查询此表后的结果显式如下(及格分数为60):
-
-
 
 写出此查询语句**<font style="color:rgb(233,30,44);">答：</font>**
 
 **<font style="color:rgb(5,117,197);">select </font>**<font style="color:rgb(32,36,41);">courseid, coursename ,score ,if(score>=60, </font><font style="color:rgb(135,48,204);">"pass"</font><font style="color:rgb(32,36,41);">,</font><font style="color:rgb(135,48,204);">"fail"</font><font style="color:rgb(32,36,41);">) </font>**<font style="color:rgb(5,117,197);">as </font>**<font style="color:rgb(32,36,41);">mark </font>**<font style="color:rgb(5,117,197);">from </font>**<font style="color:rgb(32,36,41);">course</font>
 
-
-
 | **例****7****：**<br/>表名：购物信息购物人商品名称 | <br/><br/><br/>数量 |  |
 | :--- | --- | --- |
-| A	甲 |  | 2 |
-| B	乙 | 4 |  |
-| C	丙 | 1 |  |
-| A	丁 | 2 |  |
-| B	丙 | 5 |  |
-
-
-
+| A 甲 |  | 2 |
+| B 乙 | 4 |  |
+| C 丙 | 1 |  |
+| A 丁 | 2 |  |
+| B 丙 | 5 |  |
 
 给出所有购入商品为两种或两种以上的购物人记录**<font style="color:rgb(233,30,44);">答：</font>**
 
@@ -161,14 +137,7 @@ SQL:
 
 <font style="color:rgb(32,36,41);">人</font>**<font style="color:rgb(5,117,197);">having</font>****<font style="color:rgb(5,117,197);"> </font>**<font style="color:rgb(199,20,182);">count</font><font style="color:rgb(32,36,41);">(*</font><font style="color:rgb(32,36,41);">) >= 2);</font>
 
-
-
-
-
-  
-
-
-2005-05-10	1	2
+2005-05-10 1 2
 
 **<font style="color:rgb(233,30,44);">答</font>****<font style="color:rgb(233,30,44);">1</font>****<font style="color:rgb(233,30,44);">：</font>**
 
@@ -188,15 +157,11 @@ SQL:
 
 <font style="color:rgb(5,117,197);">6.</font><font style="color:rgb(5,117,197);"> </font>**<font style="color:rgb(5,117,197);">on</font>****<font style="color:rgb(5,117,197);"> </font>**<font style="color:rgb(32,36,41);">a.</font>**<font style="color:rgb(5,117,197);">date </font>**<font style="color:rgb(32,36,41);">=</font><font style="color:rgb(32,36,41);"> </font><font style="color:rgb(32,36,41);">b.</font>**<font style="color:rgb(5,117,197);">date</font>**<font style="color:rgb(32,36,41);">;</font>
 
-
-
-例9 
+例9
 
 mysql 创建了一个联合索引(a,b,c) 以下索引生效的是(1,2,4）
 
-
-
-1、where a = 1 and b = 1 and c =1 
+1、where a = 1 and b = 1 and c =1
 
 2、where a = 1 and c = 1
 
@@ -204,7 +169,4 @@ mysql 创建了一个联合索引(a,b,c) 以下索引生效的是(1,2,4）
 
 4、where b = 1 and a =1 and c = 1
 
-
-
 > 更新: 2024-05-01 16:25:19  
-> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/gvca8twgogore7go>

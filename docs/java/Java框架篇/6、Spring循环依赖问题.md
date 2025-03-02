@@ -1,6 +1,7 @@
 # 6、Spring 循环依赖问题
 
 ## **常见问法**
+
 请解释一下spring 中的三级缓存
 
 三级缓存分别是什么?三个Map 有什么异同?
@@ -13,7 +14,7 @@
 
 ![1714548551945-78439d39-472f-476c-9d4c-e887b90f8118.png](./img/NIRkTmu9MxxVL37U/1714548551945-78439d39-472f-476c-9d4c-e887b90f8118-791124.png)
 
-**两种注入方式对循环依赖的影响****?**** ****官方解释**
+**两种注入方式对循环依赖的影响****?********官方解释**
 
 [https://docs.spring.io/spring-](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html)<font style="color:rgb(51,57,64);"> </font><u><font style="color:rgb(51,57,64);">framework/docs/current/reference/html/core.html#beans-dependency-resolution</font></u>
 
@@ -26,9 +27,6 @@
 | | |
 | --- | --- |
 | | |
-
-
- 
 
 初始化:对象属性赋值
 
@@ -44,25 +42,15 @@
 | 二级 | 缓存 | earlySingletonObjects | 存放早期暴露出来的Bean 对象，Bean 的生命周期未结束（属性还未填充完) |
 | 三级 | 缓存 | singletonFactories | 存放可以生成Bean 的工厂 |
 
-
 四个关键方法
 
-
-
 ![1714548595974-8653e8a1-1f0e-4c91-89be-772d13117b62.png](./img/NIRkTmu9MxxVL37U/1714548595974-8653e8a1-1f0e-4c91-89be-772d13117b62-975701.png)
-
-
 
 package org.springframework.beans.factory.support;
 
 public class DefaultSingletonBeanRegistry extends SimpleAliasRegistry implements SingletonBeanRegistry {
 
 /**
-
-  
-
-
-
 
 单例对象的缓存:bean 名称—bean 实例，即:所谓的单例池。表示已经经历了完整生命周期的Bean 对象
 
@@ -75,8 +63,6 @@ private final Map<String, Object> singletonObjects = new ConcurrentHashMap<>(256
 /**
 
 早期的单例对象的高速缓存: bean 名称—bean 实例。
-
-
 
 表示Bean 的生命周期还没走完（Bean 的属性还未填充）就把这个Bean 存入该缓存中也就是实例化但未初始化的bean 放入该缓存里
 
@@ -100,24 +86,13 @@ private final Map<String, ObjectFactory<?>> singletonFactories = new HashMap<>(1
 
 debug 源代码过程
 
-
-
 需要22 个断点(可选)
 
-
-
 1，A 创建过程中需要B，于是A 将自己放到三级缓里面，去实例化B
-
-
 
 2，B 实例化的时候发现需要A，于是B 先查一级缓存，没有，再查二级缓存，还是没有，再查三级缓存，找到了A 然后把三级缓存里面的这个A 放到二级缓存里面，并删除三级缓存里面的A
 
 3，B 顺利初始化完毕，将自己放到一级缓存里面(此时B 里面的A 依然是创建中状态)
-
-  
-
-
-
 
 然后回来接着创建A，此时B 已经创建结束，直接从一级缓存里面拿到B，然后完成创建，并将A 自己放到一级缓存里面。
 
@@ -147,10 +122,4 @@ Spring 解决循环依赖依靠的是Bean 的"中间态"这个概念，而这个
 
 理论上二级缓存可以解决循环依赖问题,但是需要注意,为什么需要在三级缓存中存储匿名内部类(ObjectFactory),原因在于需要创建代理对象eg:现有A 类,需要生成代理对象A 是否需要进行实例化(需要) 在三级缓存中存放的是生成具体对象的一个匿名内部类,该类可能是代理类也可能是普通的对象,而使用三级缓存可以保证无论是否需要是代理对象,都可以保证使用的是同一个对象,而不会出现,一会儿使用普通bean 一会儿使用代理类
 
-  
-
-
-
-
 > 更新: 2024-05-03 22:58:49  
-> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/vrwttcsg3ab1bvtq>

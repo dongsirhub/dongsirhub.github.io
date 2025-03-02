@@ -22,7 +22,4 @@ ThreadLocal的常用场景包括：
 
 需要注意的是，ThreadLocal虽然能够实现线程隔离，但过度使用ThreadLocal也会导致内存泄露的问题，因此在使用时需谨慎考虑。
 
-
-
 > 更新: 2024-05-02 13:15:10  
-> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/vgi277pz68qxa74d>

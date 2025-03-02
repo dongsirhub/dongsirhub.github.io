@@ -4,7 +4,7 @@
 
 1、IOC 控制反转
 
-IoC（Inverse of Control:控制反转）是⼀种设计思想，就是将原本在程序中⼿动创建对象的控制权，交由Spring框架来管理。IoC 在其他语⾔中也有应⽤，并⾮ Spring 特有。 
+IoC（Inverse of Control:控制反转）是⼀种设计思想，就是将原本在程序中⼿动创建对象的控制权，交由Spring框架来管理。IoC 在其他语⾔中也有应⽤，并⾮ Spring 特有。
 
 IoC 容器是 Spring⽤来实现 IoC 的载体， IoC 容器实际上就是个Map（key，value）,Map 中存放的是各种对象。将对象之间的相互依赖关系交给 IoC 容器来管理，并由 IoC 容器完成对象的注⼊。这样可以很⼤程度上简化应⽤的开发，把应⽤从复杂的依赖关系中解放出来。IoC 容器就像是⼀个⼯⼚⼀样，当我们需要创建⼀个对象的时候，只需要配置好配置⽂件/注解即可，完全不⽤考虑对象是如何被创建出来的。
 
@@ -12,35 +12,27 @@ DI 依赖注入
 
 DI:（Dependancy Injection：依赖注入)站在容器的角度，将对象创建依赖的其他对象注入到对象中。
 
-
-
 2、AOP 动态代理
 
 AOP(Aspect-Oriented Programming:⾯向切⾯编程)能够将那些与业务⽆关，却为业务模块所共同调⽤的逻辑或责任（例如事务处理、⽇志管理、权限控制等）封装起来，便于减少系统的重复代码，降低模块间的耦合度，并有利于未来的可拓展性和可维护性。
 
 Spring AOP就是基于动态代理的，如果要代理的对象，实现了某个接⼝，那么Spring AOP会使⽤JDKProxy，去创建代理对象，⽽对于没有实现接⼝的对象，就⽆法使⽤ JDK Proxy 去进⾏代理了，这时候Spring AOP会使⽤基于asm框架字节流的Cglib动态代理 ，这时候Spring AOP会使⽤ Cglib ⽣成⼀个被代理对象的⼦类来作为代理。
 
-
-
 3、Bean生命周期
 
-单例对象： singleton 
+单例对象： singleton
 
-总结：单例对象的生命周期和容器相同 
+总结：单例对象的生命周期和容器相同
 
-多例对象： prototype 
+多例对象： prototype
 
-出生：使用对象时spring框架为我们创建 
+出生：使用对象时spring框架为我们创建
 
-活着：对象只要是在使用过程中就一直活着 
+活着：对象只要是在使用过程中就一直活着
 
 死亡：当对象长时间不用且没有其它对象引用时，由java的垃圾回收机制回收
 
-
-
 ![1714621901731-1b9fe128-608f-406f-832d-4eee8124e6ff.png](./img/iYORlWrpn9-MZHoH/1714621901731-1b9fe128-608f-406f-832d-4eee8124e6ff-379821.png)
-
-
 
 IOC容器初始化加载Bean流程：
 
@@ -86,11 +78,7 @@ IOC容器初始化加载Bean流程：
 
 10当Bean不再需要时，会经过清理阶段，如果Bean实现了DisposableBean这个接口，或者根据spring配置的destroy-method属性，调用实现的destroy()方法
 
-
-
 4、Bean作用域
-
-
 
 默认作用域是singleton，多个线程访问同一个bean时会存在线程不安全问题
 
@@ -106,13 +94,11 @@ ThreadLocal：
 
 将一个共用的ThreadLocal静态实例作为key，将不同对象的引用保存到不同线程的ThreadLocalMap中，然后在线程执行的各处通过这个静态ThreadLocal实例的get()方法取得自己线程保存的那个对象，避免了将这个对象作为参数传递的麻烦。
 
-
-
 5、循环依赖
 
 循环依赖其实就是循环引用，也就是两个或者两个以上的 Bean 互相持有对方，最终形成闭环。比如A 依赖于B，B又依赖于A
 
-Spring中循环依赖场景有: 
+Spring中循环依赖场景有:
 
 ●prototype 原型 bean循环依赖
 
@@ -125,8 +111,6 @@ Spring中循环依赖场景有:
 Spring 启动的时候会把所有bean信息(包括XML和注解)解析转化成Spring能够识别的BeanDefinition并存到Hashmap里供下面的初始化时用，然后对每个 BeanDefinition 进行处理。普通 Bean 的初始化是在容器启动初始化阶段执行的，而被lazy-init=true修饰的 bean 则是在从容器里第一次进行context.getBean() 时进行触发。
 
 三级缓存解决循环依赖问题
-
-
 
 1。Spring容器初始化ClassA通过构造器初始化对象后提前暴露到Spring容器中的singletonFactorys（三级缓存中）。
 
@@ -188,8 +172,6 @@ Spring注解
 
 EnableAutoConfigurationImportSelector选择器给Spring容器中来导入一些组件。
 
-
-
 2、@SpringMVC
 
 SpringMVC原理
@@ -209,8 +191,6 @@ SpringMVC原理
 7。DispaterServlet 把返回的 Model 传给 View （视图渲染）。
 
 8。把 View 返回给请求者（浏览器）
-
-
 
 3、@SpringMybatis
 
@@ -252,11 +232,7 @@ Hibernate 是完整的对象-关系映射的框架，开发工程中，无需过
 
 Mybatis 需要自行管理映射关系；
 
-
-
 4、@Transactional
-
-
 
 Plain Text
 
@@ -270,23 +246,21 @@ Plain Text
 
 事务传播属性
 
-1) REQUIRED（默认属性） 如果存在一个事务，则支持当前事务。如果没有事务则开启一个新的事务。 
+1) REQUIRED（默认属性） 如果存在一个事务，则支持当前事务。如果没有事务则开启一个新的事务。
 
-1MANDATORY 支持当前事务，如果当前没有事务，就抛出异常。 
+1MANDATORY 支持当前事务，如果当前没有事务，就抛出异常。
 
-2NEVER 以非事务方式执行，如果当前存在事务，则抛出异常。 
+2NEVER 以非事务方式执行，如果当前存在事务，则抛出异常。
 
-3NOT_SUPPORTED 以非事务方式执行操作，如果当前存在事务，就把当前事务挂起。 
+3NOT_SUPPORTED 以非事务方式执行操作，如果当前存在事务，就把当前事务挂起。
 
-4REQUIRES_NEW 新建事务，如果当前存在事务，把当前事务挂起。 
+4REQUIRES_NEW 新建事务，如果当前存在事务，把当前事务挂起。
 
 5SUPPORTS 支持当前事务，如果当前没有事务，就以非事务方式执行。
 
 7) NESTED （局部回滚） 支持当前事务，新增Savepoint点，与当前事务同步提交或回滚。 嵌套事务一个非常重要的概念就是内层事务依赖于外层事务。外层事务失败时，会回滚内层事务所做的动作。而内层事务操作失败并不会引起外层事务的回滚。
 
 Spring源码阅读
-
-
 
 1、Spring中的设计模式
 
@@ -300,9 +274,4 @@ Spring源码阅读
 
 适配器模式：Spring AOP 的增强或通知(Advice)使⽤到了适配器模式、spring MVC 中也是⽤到了适配器模式适配 Controller 。
 
-
-
-
-
 > 更新: 2024-05-02 11:55:22  
-> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/kkthhrspukthtihh>

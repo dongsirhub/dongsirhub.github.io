@@ -10,7 +10,4 @@ HashMap内部维护了一个Entry数组，用于存储键值对对象Entry。数
 
 通过哈希函数将键映射到数组索引位置，可以快速定位到对应的链表或红黑树，然后在链表或红黑树中进行查找、插入或删除操作。HashMap通过哈希表的数据结构，实现了高效的键值对存储和查找。
 
-
-
 > 更新: 2024-05-02 13:08:45  
-> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/ygiiggww90z767b5>

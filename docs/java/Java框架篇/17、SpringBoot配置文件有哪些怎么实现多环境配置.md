@@ -4,8 +4,6 @@ Spring Boot 的核心配置文件是application 和bootstrap 配置文件。appl
 
 ● bootstrap 由父ApplicationContext 加载，比applicaton 优先加载
 
-
-
 ● bootstrap 里面的属性不能被覆盖
 
 **bootstrap 配置文件有以下几个应用场景：**
@@ -16,8 +14,6 @@ Spring Boot 的核心配置文件是application 和bootstrap 配置文件。appl
 
 ● 一些固定的不能被覆盖的属性；
 
-
-
 ● 一些加密/解密的场景； 提供多套配置文件，如：
 
 applcation.properties
@@ -26,7 +22,4 @@ application-dev.properties application-test.properties application-prod.properti
 
 运行时指定具体的配置文件，具体请看这篇文章《[SpringBootProfile不同环境配](https://mp.weixin.qq.com/s?__biz=MzI3ODcxMzQzMw%3D%3D&mid=2247484369&idx=1&sn=1155fccb4fef1db88cb76fd17b1756d7&scene=21)<u><font style="color:rgb(51,57,64);">置</font></u>》。
 
-
-
 > 更新: 2024-05-01 16:05:17  
-> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/reuf5xwau0g4pihf>

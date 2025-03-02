@@ -4,7 +4,4 @@ volatile 是Java 提供的最轻量级的同步机制，保证了共享变量的
 
 volatile 禁止了指令重排，可以保证程序执行的有序性，但是由于禁止了指令重排，所以JVM 相关的优化没了，效率会偏弱
 
-
-
 > 更新: 2024-04-30 18:34:54  
-> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/vk0kf1m8d5qicin7>

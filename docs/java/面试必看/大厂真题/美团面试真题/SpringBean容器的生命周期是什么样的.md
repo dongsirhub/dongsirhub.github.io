@@ -16,7 +16,4 @@
 
 总结：Spring Bean容器的生命周期包括实例化、属性设置、初始化、使用和销毁等阶段。通过实现相应的接口或在配置文件中指定方法，可以对Bean的生命周期进行管理和定制。
 
-
-
 > 更新: 2024-05-02 13:08:13  
-> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/nr8iri2agxbu17ng>

@@ -6,9 +6,9 @@
 
 **例****2****：如何优化****?****下面的语句？**
 
-select * from admin left	join	log on admin.admin_id	= log.admin_id where log.admin_id>10
+select * from admin left join log on admin.admin_id = log.admin_id where log.admin_id>10
 
-优化为：select * from (select * from admin where admin_id>10) T1 lef join log on T1.admin_id = log.admin_id。
+优化为：select *from (select* from admin where admin_id>10) T1 lef join log on T1.admin_id = log.admin_id。
 
 使用JOIN 时候，应该用小的结果驱动大的结果（left join 左边表结果尽量小如果有条件应该放到左边先处理，right join 同理反向），同时尽量把牵涉到多表联合的查询拆分多个query（多个连表查询效率低，容易到之后锁表和阻塞）。
 
@@ -16,19 +16,12 @@ select * from admin left	join	log on admin.admin_id	= log.admin_id where log.adm
 
 例如：select * from admin order by admin_id limit 100000,10
 
-
-
 优化为：select * from admin where admin_id between 100000 and 100010 order by admin_id。
 
 **例****4****：尽量避免在列上做运算，这样导致索引失效**
 
 例如：select * from admin where year(admin_time)>2014
 
-
-
 优化为：select * from admin where admin_time> '2014-01-01′
 
-
-
 > 更新: 2024-05-01 16:21:58  
-> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/gk8zgwuvqhvg4sgp>

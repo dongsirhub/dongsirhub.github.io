@@ -28,8 +28,6 @@ l 排查：可以通过jvisualvm 进行内存快照分析
 
 参考[https://www.cnblogs.com/boboooo/p/13164071.html](https://www.cnblogs.com/boboooo/p/13164071.html)
 
-
-
 栈溢出、堆溢出案例演示
 
 ![1714467382101-c3e083fe-0dc0-42a3-a327-1a9b9c3a6c08.png](./img/jEP0N4-Y40_Lbh3k/1714467382101-c3e083fe-0dc0-42a3-a327-1a9b9c3a6c08-485664.png)
@@ -64,7 +62,4 @@ l 排查：可以通过jvisualvm 进行内存快照分析
 
 ![1714467438904-014e16bd-1efe-4989-b5bb-5284a2e9f257.png](./img/jEP0N4-Y40_Lbh3k/1714467438904-014e16bd-1efe-4989-b5bb-5284a2e9f257-902684.png)
 
-
-
 > 更新: 2024-04-30 16:58:17  
-> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/ddo91gadttgg0kgw>

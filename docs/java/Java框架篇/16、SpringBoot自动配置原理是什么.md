@@ -4,11 +4,7 @@
 
 首先它得是一个配置文件，其次根据类路径下是否有这个类去自动配置。
 
-
-
 @EnableAutoConfiguration 是实现自动配置的注解
-
-
 
 @Configuration 表示这是一个配置文件具体参考文档：
 
@@ -18,7 +14,4 @@
 
 <u><font style="color:rgb(51,57,64);"></font></u>
 
-
-
 > 更新: 2024-05-01 16:04:42  
-> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/dzr6tkfgl5ii9n67>

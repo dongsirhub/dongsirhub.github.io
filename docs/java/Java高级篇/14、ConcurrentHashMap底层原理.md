@@ -15,7 +15,7 @@ throw new NullPointerException(); int hash = hash(key);
 //把hash 右移segmentShift，相当于只要hash 值的高 32-segmentShift 位，右移的目的是保留了hash 值的高位。然后和segmentMask 与操作计算元素在 segment 数组中的下表
 int j = (hash >>> segmentShift) & segmentMask;
 //使用unsafe 对象获取数组中第j 个位置的值，后面加上的是偏移量
-if ((s = (Segment<K,V>)UNSAFE.getObject	// nonvolatile; recheck (segments, (j << SSHIFT) + SBASE)) == null) // in ensureSegment
+if ((s = (Segment<K,V>)UNSAFE.getObject // nonvolatile; recheck (segments, (j << SSHIFT) + SBASE)) == null) // in ensureSegment
 // 如果查找到的 Segment 为空，初始化 s = ensureSegment(j);
 //插入segment 对象
 return s.put(key, hash, value, false);
@@ -145,9 +145,4 @@ addCount(1L, binCount); return null;
 }
 ```
 
-
-
-
-
 > 更新: 2024-04-30 18:33:54  
-> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/mgei2d6l3s2bz6h0>

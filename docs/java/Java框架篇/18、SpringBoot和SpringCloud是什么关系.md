@@ -4,7 +4,4 @@ Spring Boot 是Spring 的一套快速配置脚手架，可以基于Spring Boot �
 
 可以单独使用Spring Boot 开发项目，但是Spring Cloud 离不开Spring Boot。
 
-
-
 > 更新: 2024-05-01 16:05:35  
-> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/osfu7x1idkgigb9g>

@@ -4,7 +4,4 @@ ConcurrentHashMap 是线程安全的Map 容器，JDK8 之前，ConcurrentHashMap
 
 hashtable 类基本上所有的方法都是采用synchronized 进行线程安全控制，高并发情况下效率就降低，ConcurrentHashMap 是采用了分段锁的思想提高性能，锁粒度更细化
 
-
-
 > 更新: 2024-04-30 18:28:51  
-> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/shb26quz06vfr3x7>

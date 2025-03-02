@@ -6,8 +6,6 @@ RabbitMQ、RocketMQ、Kafka 等任何队列不保证消息不重复，如果业�
 
 方式一：Redis 的setNX() , 做消息id 去重java 版本目前不支持设置过期时间
 
-
-
 //Redis 中操作，判断是否已经操作过TODO boolean flag = jedis.setNX(key);
 
 if(flag){
@@ -16,13 +14,9 @@ if(flag){
 
 }else{
 
-
-
 //忽略，重复消费
 
 }
-
-
 
 方式二：redis 的Incr 原子操作：key 自增，大于0 返回值大于0 则说明消费过，
 
@@ -36,19 +30,12 @@ if(num == 1){
 
 //忽略，重复消费
 
-
-
 }
 
 方式三：数据库去重表
-
-
 
 设计一个去重表，某个字段使用Message 的key 做唯一索引，因为存在唯一索引，所以重复消费会失败
 
 CREATE TABLE `message_record` ( `id` int(11) unsigned NOT NULL AUTO_INCREMENT, `key` varchar(128) DEFAULT NULL, `create_time` datetime DEFAULT NULL, PRIMARY KEY (`id`), UNIQUE KEY `key` (`key`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-
-
 > 更新: 2024-05-01 16:32:35  
-> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/cfx9xk8dggic514p>

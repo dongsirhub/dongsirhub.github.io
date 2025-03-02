@@ -12,7 +12,4 @@
 
 总结：可重入锁是一种支持重入的锁机制，同一个线程可以多次获取同一个锁而不会发生死锁。在Java中，ReentrantLock是可重入锁的一个具体实现，通过它可以实现更灵活和精细的锁控制。
 
-
-
 > 更新: 2024-05-02 13:15:49  
-> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/wm9recva3ak3yot6>

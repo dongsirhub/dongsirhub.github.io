@@ -18,7 +18,4 @@ l **<font style="color:rgb(32,36,41);">复制算法</font>**<font style="color:r
 
 <font style="color:rgb(32,36,41);">a) 效率低速度慢，需要移动对象，但不会产生碎片。</font>
 
-
-
 > 更新: 2024-04-30 16:55:31  
-> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/drggh27dsluyqpw5>

@@ -16,9 +16,4 @@
 
 通过以上的方法，可以帮助定位慢SQL的产生原因，并优化相应的SQL语句和数据库配置，提升数据库的查询性能。
 
-
-
-
-
 > 更新: 2024-05-02 13:11:11  
-> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/lr883xlh0ct4u1if>

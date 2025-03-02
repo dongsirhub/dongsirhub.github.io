@@ -8,7 +8,4 @@
 
 （3） 编程式事物管理的定义：在代码中显式挪用beginTransaction()、commit()、rollback()等事务治理相关的方法，这就是编程式事务管理。Spring 对事物的编程式管理有基于底层API 的编程式管理和基于TransactionTemplate 的编程式事务管理两种方式。
 
-
-
 > 更新: 2024-05-01 16:00:25  
-> [原文](https://www.yuque.com/zhichangzhishiku/edrbqg/qnk7naflpe25yrr5>
