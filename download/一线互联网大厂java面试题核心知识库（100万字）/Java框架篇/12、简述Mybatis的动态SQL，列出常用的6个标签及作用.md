@@ -1,0 +1,32 @@
+# 12、简述 Mybatis 的动态 SQL，列出常用的 6 个标签及作用
+
+动态SQL 是MyBatis 的强大特性之一基于功能强大的OGNL 表达式。
+
+动态SQL 主要是来解决查询条件不确定的情况，在程序运行期间，根据提交的条件动态的完成查询
+
+常用的标签:
+
+
+
+<if> : 进行条件的判断
+
+
+
+<where>：在<if>判断后的SQL 语句前面添加WHERE 关键字，并处理SQL 语句开始位置的AND 或者OR 的问题
+
+<trim>：可以在SQL 语句前后进行添加指定字符或者去掉指定字符.
+
+
+
+<set>: 主要用于修改操作时出现的逗号问题
+
+
+
+<choose> <when> <otherwise>：类似于java 中的switch 语句.在所有的条件中选择其一
+
+<foreach>：迭代操作
+
+
+
+> 更新: 2024-05-01 16:02:05  
+> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/aiqsx5wr1oaygxd6>

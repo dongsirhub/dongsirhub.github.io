@@ -27,8 +27,8 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans'],
   },
 
   presets: [
@@ -74,18 +74,18 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'kb',
-          position: 'left',
-          label: 'kb',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'java',
-          position: 'left',
-          label: 'java',
-        },
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'kb',
+        //   position: 'left',
+        //   label: 'kb',
+        // },
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'java',
+        //   position: 'left',
+        //   label: 'java',
+        // },
         {to: '/blog', label: 'Blog', position: 'left'},
         {href: 'https://dongsirhub.github.io/comprehensive-rust/zh-CN/index.html', label: 'rust', position: 'right'},
         {

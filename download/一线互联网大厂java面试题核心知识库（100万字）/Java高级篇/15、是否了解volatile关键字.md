@@ -1,0 +1,10 @@
+# 15、是否了解 volatile 关键字
+
+volatile 是Java 提供的最轻量级的同步机制，保证了共享变量的可见性，被volatile 关键字修饰的变量，如果值发生了变化，其他线程立刻可见，避免出现脏读现象。
+
+volatile 禁止了指令重排，可以保证程序执行的有序性，但是由于禁止了指令重排，所以JVM 相关的优化没了，效率会偏弱
+
+
+
+> 更新: 2024-04-30 18:34:54  
+> 原文: <https://www.yuque.com/zhichangzhishiku/edrbqg/vk0kf1m8d5qicin7>
